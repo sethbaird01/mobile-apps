@@ -44,7 +44,6 @@
 		54E127FE28D21F530006DFA9 = {
 			isa = PBXGroup;
 			children = (
-				54535F3428D225A600F9E290 /* Destiny.swift */,
 				54E1280928D21F530006DFA9 /* Destiny */,
 				54E1280828D21F530006DFA9 /* Products */,
 			);
@@ -61,6 +60,7 @@
 		54E1280928D21F530006DFA9 /* Destiny */ = {
 			isa = PBXGroup;
 			children = (
+				54535F3428D225A600F9E290 /* Destiny.swift */,
 				54535F3228D2228600F9E290 /* Story.swift */,
 				54E1280A28D21F530006DFA9 /* AppDelegate.swift */,
 				54E1280C28D21F530006DFA9 /* SceneDelegate.swift */,
