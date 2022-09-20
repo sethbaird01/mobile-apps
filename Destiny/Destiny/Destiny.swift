@@ -8,8 +8,10 @@
 import Foundation
 
 struct Destiny {
+    //index of current element
     var currentStory : Int = 0
     
+    //hold story elements in an array
     let stories = [ //construct Story objects inside the list
         Story(title: "The forest's path diverges.", choice1: "Go left", choice1index: 1, choice2: "Go right", choice2index: 2), //begin (0)
         
@@ -25,6 +27,7 @@ struct Destiny {
     
     ]
 
+    //getter functions
     func currTitle() -> String {
         return stories[currentStory].title
     }
@@ -37,6 +40,7 @@ struct Destiny {
         return "\(currentStory)"
     }
     
+    //button handlers
     mutating func advanceTo(choiceNum: Int){
         if(currentStory != -1){
             if(choiceNum == 1){

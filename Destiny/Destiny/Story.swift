@@ -10,6 +10,7 @@ import Foundation
 
 struct Story {
   
+    //hold all values for a story element
     let title: String
     let choice1: String
     let choice1index: Int
