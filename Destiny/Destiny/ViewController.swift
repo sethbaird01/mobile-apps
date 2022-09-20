@@ -22,21 +22,17 @@ class ViewController: UIViewController {
         updateView()
     }
     
-    var previous = "-1"
     func updateView(){
         if(game.currentStory != -1){
             roomInfo.text = game.currTitle()
             choice1Out.setTitle(game.currChoices()[0], for: .normal)
             choice2Out.setTitle(game.currChoices()[1], for: .normal)
             
-            //fade into new image over 0.75s
-//            imageOut.image = game.currImage()
-            
-            UIImageView.animate(withDuration: 1, delay: 0.5, options: UIView.AnimationOptions.transitionFlipFromTop, animations: {
-                self.imageOut.image = UIImage.init(named: self.previous)
-                    }, completion: { finished in
-                        self.imageOut.image = UIImage.init(named: self.game.currImage())
-                    })
+
+            print("current index \(game.currentStory)")
+
+            UIView.transition(with: self.imageOut, duration:1,
+              options: UIView.AnimationOptions.transitionCrossDissolve, animations: { self.imageOut.image = UIImage.init(named: self.game.currImage()) })
         }
     }
 
