@@ -40,7 +40,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Choice1" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
                                     <color key="baseBackgroundColor" systemColor="tertiaryLabelColor"/>
                                 </buttonConfiguration>
                                 <connections>
