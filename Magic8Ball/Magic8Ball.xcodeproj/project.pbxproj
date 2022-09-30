@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54AE669828E730CA000383F7 /* 8square.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54AE669728E730CA000383F7 /* 8square.jpg */; };
+		54AE669C28E735E4000383F7 /* 8blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54AE669B28E735E4000383F7 /* 8blue.jpg */; };
 		54B4632628DCA5B0003B40F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B4632528DCA5B0003B40F5 /* AppDelegate.swift */; };
 		54B4632828DCA5B0003B40F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B4632728DCA5B0003B40F5 /* SceneDelegate.swift */; };
 		54B4632A28DCA5B0003B40F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B4632928DCA5B0003B40F5 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54AE669728E730CA000383F7 /* 8square.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8square.jpg; sourceTree = "<group>"; };
+		54AE669B28E735E4000383F7 /* 8blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8blue.jpg; sourceTree = "<group>"; };
 		54B4632228DCA5B0003B40F5 /* Magic8Ball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magic8Ball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B4632528DCA5B0003B40F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54B4632728DCA5B0003B40F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				54B4632E28DCA5B2003B40F5 /* Assets.xcassets */,
 				54B4633028DCA5B2003B40F5 /* LaunchScreen.storyboard */,
 				54B4633328DCA5B2003B40F5 /* Info.plist */,
+				54AE669728E730CA000383F7 /* 8square.jpg */,
+				54AE669B28E735E4000383F7 /* 8blue.jpg */,
 			);
 			path = Magic8Ball;
 			sourceTree = "<group>";
@@ -126,8 +132,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				54B4633228DCA5B2003B40F5 /* LaunchScreen.storyboard in Resources */,
+				54AE669C28E735E4000383F7 /* 8blue.jpg in Resources */,
 				54B4632F28DCA5B2003B40F5 /* Assets.xcassets in Resources */,
 				54B4632D28DCA5B0003B40F5 /* Main.storyboard in Resources */,
+				54AE669828E730CA000383F7 /* 8square.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,8 +295,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HZ8W239JR9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Magic8Ball/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -301,11 +311,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = student.Magic8Ball;
+				PRODUCT_BUNDLE_IDENTIFIER = k12friscoisd.sethbaird587.Magic8Ball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,8 +325,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HZ8W239JR9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Magic8Ball/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -328,11 +341,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = student.Magic8Ball;
+				PRODUCT_BUNDLE_IDENTIFIER = k12friscoisd.sethbaird587.Magic8Ball;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
