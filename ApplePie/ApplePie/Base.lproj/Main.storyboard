@@ -20,33 +20,52 @@
                                 <rect key="frame" x="0.0" y="20" width="1024" height="395"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="249" image="Tree 0" translatesAutoresizingMaskIntoConstraints="NO" id="X1c-N4-m3M">
-                                        <rect key="frame" x="0.0" y="0.0" width="781.5" height="395"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="788.5" height="395"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1WK-Z0-q8Z">
-                                        <rect key="frame" x="786.5" y="0.0" width="237.5" height="395"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1WK-Z0-q8Z">
+                                        <rect key="frame" x="793.5" y="0.0" width="230.5" height="395"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qtx-pd-VL5">
-                                                <rect key="frame" x="0.0" y="0.0" width="237.5" height="303.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap here to enter a letter" textAlignment="center" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qtx-pd-VL5">
+                                                <rect key="frame" x="0.0" y="0.0" width="230.5" height="95"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                <connections>
+                                                    <action selector="textFieldEntry:" destination="BYZ-38-t0r" eventType="editingChanged" id="JJ0-9R-M0n"/>
+                                                </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _ _ _ _" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpz-hl-CsR">
-                                                <rect key="frame" x="0.0" y="308.5" width="237.5" height="49"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _ _ _" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="tpz-hl-CsR">
+                                                <rect key="frame" x="0.0" y="100" width="237.5" height="95"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wins: 0, Losses: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jot-4l-j4Z">
-                                                <rect key="frame" x="0.0" y="362.5" width="237.5" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="100" width="230.5" height="95"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a, b, c, d, e, f" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8GA-yV-7nV">
+                                                <rect key="frame" x="0.0" y="200" width="230.5" height="95"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PZ-vL-Ckw">
+                                                <rect key="frame" x="0.0" y="300" width="230.5" height="95"/>
+                                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                                <connections>
+                                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fc8-ty-aMv"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="X1c-N4-m3M" secondAttribute="bottom" constant="5" id="5P3-In-O5E"/>
                                     <constraint firstAttribute="bottom" secondItem="X1c-N4-m3M" secondAttribute="bottom" constant="5" id="TUM-eg-q6s"/>
                                 </constraints>
                             </stackView>
@@ -61,6 +80,13 @@
                             <constraint firstItem="CXU-wM-qLO" firstAttribute="top" secondItem="E6u-ng-6oa" secondAttribute="bottom" id="zx9-KO-e9d"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="guessedLettersLabel" destination="8GA-yV-7nV" id="2iL-qu-HVe"/>
+                        <outlet property="image" destination="X1c-N4-m3M" id="20k-df-tBO"/>
+                        <outlet property="scoreLabel" destination="jot-4l-j4Z" id="0fD-8C-zfb"/>
+                        <outlet property="textField" destination="Qtx-pd-VL5" id="hIV-qr-MX8"/>
+                        <outlet property="wordLabel" destination="tpz-hl-CsR" id="CNk-fN-g5Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,6 +97,9 @@
         <image name="Tree 0" width="600" height="945"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
