@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     var goalWord = ""
     var guessedLetters: [Character] = []
     var moves = 7
-    var dictionary: [String] = ["abruptly", "absurd", "abyss", "affix", "askew", "avenue", "awkward", "axiom", "azure", "bagpipes", "bandwagon", "banjo", "bayou", "beekeeper", "blitz", "blizzard", "boggle", "bookworm", "boxcar", "boxful", "buckaroo", "buffalo", "buffoon", "buxom", "buzzard", "buzzing", "buzzwords", "cobweb", "croquet", "crypt", "curacao", "cycle", "daiquiri", "dizzying", "duplex", "dwarves", "embezzle", "equip", "espionage", "exodus", "faking", "fishhook", "fixable", "fjord", "flapjack", "flopping", "flyby", "foxglove", "frazzled", "frizzled", "fuchsia", "funny", "gabby", "galaxy", "galvanize", "gazebo", "gizmo", "glowworm", "glyph", "gnarly", "gnostic", "gossip", "grogginess", "haiku", "haphazard", "hyphen", "icebox", "injury", "ivory", "ivy", "jackpot", "jaundice", "jawbreaker", "jaywalk", "jazziest", "jazzy", "jelly", "jigsaw", "jinx", "jiujitsu", "jockey", "jogging", "joking", "jovial", "joyful", "jukebox", "jumbo", "kayak", "kazoo", "khaki", "kilobyte", "kiosk", "kitsch", "kiwifruit", "klutz", "knapsack", "larynx", "lengths", "lucky", "luxury", "lymph", "marquis", "matrix", "megahertz", "microwave", "mnemonic", "mystify", "nightclub", "nowadays", "nymph", "onyx", "oxidize", "oxygen", "pajama", "peekaboo", "phlegm", "pixel", "pizazz", "pneumonia", "psyche", "puppy", "puzzling", "quartz", "queue", "quips", "quiz", "quizzes", "quorum", "rhubarb", "rhythm", "rickshaw", "scratch", "snazzy", "sphinx", "spritz", "squawk", "staff", "strength", "strengths", "stretch", "stronghold", "stymied", "subway", "swivel", "syndrome", "thriftless", "thumbscrew", "topaz", "transcript", "transplant", "twelfth", "unknown", "unworthy", "unzip", "uptown", "vaporize", "vixen", "voodoo", "vortex", "walkway", "waltz", "wave", "wavy", "waxy", "wellspring", "wheezy", "whiskey", "whizzing", "whomever", "witchcraft", "wizard", "woozy", "wristwatch", "wyvern", "xylophone", "yachtsman", "yippee", "yoked", "youthful", "yummy", "zephyr", "zigzag", "zilch", "zipper", "zodiac", "zombie"]
+    var dictionary: [String] = ["abruptly", "absurd", "abyss", "affix", "askew", "avenue", "awkward", "axiom", "azure", "bagpipes", "bandwagon", "banjo", "bayou", "beekeeper", "blitz", "blizzard", "boggle", "bookworm", "boxcar", "boxful", "buckaroo", "buffalo", "buffoon", "buxom", "buzzard", "buzzing", "buzzword", "cobweb", "croquet", "crypt", "curacao", "cycle", "daiquiri", "dizzying", "duplex", "dwarves", "embezzle", "equip", "espionage", "exodus", "faking", "fishhook", "fixable", "fjord", "flapjack", "flopping", "flyby", "foxglove", "frazzled", "frizzled", "fuchsia", "funny", "gabby", "galaxy", "galvanize", "gazebo", "gizmo", "glowworm", "glyph", "gnarly", "gnostic", "gossip", "grogginess", "haiku", "haphazard", "hyphen", "icebox", "injury", "ivory", "ivy", "jackpot", "jaundice", "jawbreaker", "jaywalk", "jazziest", "jazzy", "jelly", "jigsaw", "jinx", "jiujitsu", "jockey", "jogging", "joking", "jovial", "joyful", "jukebox", "jumbo", "kayak", "kazoo", "khaki", "kilobyte", "kiosk", "kitsch", "kiwifruit", "klutz", "knapsack", "larynx", "lengths", "lucky", "luxury", "lymph", "marquis", "matrix", "megahertz", "microwave", "mnemonic", "mystify", "nightclub", "nowadays", "nymph", "onyx", "oxidize", "oxygen", "pajama", "peekaboo", "phlegm", "pixel", "pizazz", "pneumonia", "psyche", "puppy", "puzzling", "quartz", "queue", "quips", "quiz", "quizzes", "quorum", "rhubarb", "rhythm", "rickshaw", "scratch", "snazzy", "sphinx", "spritz", "squawk", "staff", "strength", "strengths", "stretch", "stronghold", "stymied", "subway", "swivel", "syndrome", "thriftless", "thumbscrew", "topaz", "transcript", "transplant", "twelfth", "unknown", "unworthy", "unzip", "uptown", "vaporize", "vixen", "voodoo", "vortex", "walkway", "waltz", "wave", "wavy", "waxy", "wheezy", "whiskey", "whizzing", "whomever", "witchcraft", "wizard", "woozy", "wristwatch", "wyvern", "xylophone", "yachtsman", "yippee", "yoked", "youthful", "yummy", "zephyr", "zigzag", "zilch", "zipper", "zodiac", "zombie"]
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         }
         
         if(wordLabel.text == guessedWord){
-            //nothing changed
+            //nothing changed, decrement moves
             moves -= 1
             image.image = UIImage.init(named: "Tree \(moves)")
             
@@ -64,10 +64,10 @@ class ViewController: UIViewController {
     }
     
     func initUI() {
+        //reset all UI elements
         moves = 7
         image.image = UIImage.init(named: "Tree \(moves)")
         goalWord = dictionary.remove(at: Int.random(in: 0...dictionary.endIndex))
-//        goalWord = "easyword"
         wordLabel.text = String.init(repeating: "_ ", count: goalWord.count)
         scoreLabel.text = getScoreText()
         guessedLetters = []
@@ -114,4 +114,3 @@ class ViewController: UIViewController {
 
 
 }
-
