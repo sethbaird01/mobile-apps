@@ -11,9 +11,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        for x in (1...42){
+            self.view.addSubview(Square.init(frame: CGRect(x: Int.random(in: 0...7*x), y: Int.random(in: 0...7*x), width: 50, height: 50)))
+        }
     }
-
-
 }
-
