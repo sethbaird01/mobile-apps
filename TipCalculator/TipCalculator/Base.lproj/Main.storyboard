@@ -26,22 +26,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8EU-OG-xJJ">
-                                <rect key="frame" x="20" y="152" width="335" height="124"/>
+                                <rect key="frame" x="20" y="152" width="335" height="120"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndP-uC-vLS" userLabel="billstack">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ndP-uC-vLS" userLabel="billstack">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lif-M5-z7L">
-                                                <rect key="frame" x="0.0" y="0.0" width="255" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="84.333333333333329" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$10.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PyF-z9-CyX">
-                                                <rect key="frame" x="255" y="0.0" width="80" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="PT6-ic-ZEy"/>
-                                                </constraints>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$10.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PyF-z9-CyX">
+                                                <rect key="frame" x="263" y="0.0" width="72" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -63,10 +60,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ngp-SW-B5V">
-                                                <rect key="frame" x="135" y="0.0" width="200" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="TqO-pn-Z7i"/>
-                                                </constraints>
+                                                <rect key="frame" x="116" y="0.0" width="219" height="31"/>
                                                 <segments>
                                                     <segment title="15%"/>
                                                     <segment title="18%"/>
@@ -82,23 +76,35 @@
                                             <constraint firstAttribute="height" constant="30" id="pad-5J-T0g"/>
                                         </constraints>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom tip" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pae-qe-OsS" userLabel="customtip">
-                                        <rect key="frame" x="0.0" y="90" width="335" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="customTipSelect:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="nzo-Yb-i9d"/>
-                                        </connections>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="VE5-RF-6mb" userLabel="customtipstack">
+                                        <rect key="frame" x="0.0" y="90" width="335" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umo-6n-4FR">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.333333333333329" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalHuggingPriority="248" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="40%" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pae-qe-OsS" userLabel="customtip">
+                                                <rect key="frame" x="276.66666666666669" y="0.0" width="58.333333333333314" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="customTipSelect:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="hYT-2C-796"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Nj2-WG-IDo"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Pae-qe-OsS" secondAttribute="bottom" id="dcJ-uC-GD9"/>
                                     <constraint firstItem="ndP-uC-vLS" firstAttribute="top" secondItem="8EU-OG-xJJ" secondAttribute="top" id="yki-pf-hPu"/>
-                                    <constraint firstAttribute="trailing" secondItem="Pae-qe-OsS" secondAttribute="trailing" id="zyr-QT-93G"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xlP-yM-NPk">
-                                <rect key="frame" x="20" y="426" width="335" height="75"/>
+                                <rect key="frame" x="20" y="422" width="335" height="75"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9F-kd-MxD" userLabel="tipamounstack">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
@@ -180,7 +186,8 @@
                     </view>
                     <connections>
                         <outlet property="billAmountIn" destination="PyF-z9-CyX" id="qHR-9v-efd"/>
-                        <outlet property="customTip" destination="Pae-qe-OsS" id="h85-DP-6nM"/>
+                        <outlet property="customTip" destination="Pae-qe-OsS" id="5dc-Qz-7bY"/>
+                        <outlet property="customTipStack" destination="VE5-RF-6mb" id="1Dh-3t-wMk"/>
                         <outlet property="tipAmountOut" destination="4r5-3M-lUI" id="0Rc-pL-IKO"/>
                         <outlet property="tipSelection" destination="ngp-SW-B5V" id="vi5-bE-qdF"/>
                         <outlet property="totalOut" destination="KSN-S2-rd0" id="rBG-2s-63i"/>
