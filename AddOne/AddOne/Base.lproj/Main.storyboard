@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HVD_Comic_Serif_Pro.otf">
+            <string>HVDComicSerifPro</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AddOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="7aC-zy-S4m" userLabel="images">
+                                <rect key="frame" x="15" y="77" width="345" height="51"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="UxR-hM-8J7">
+                                        <rect key="frame" x="0.0" y="0.0" width="119" height="51"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="tGd-KY-jON">
+                                        <rect key="frame" x="196" y="0.0" width="149" height="51"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="mco-Ay-GjI" userLabel="labels">
+                                <rect key="frame" x="50" y="91" width="258" height="26.666666666666671"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbn-xz-voD">
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZe-dz-6mV">
+                                        <rect key="frame" x="197" y="0.0" width="61" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Fw-px-d4X">
+                                <rect key="frame" x="148" y="862" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="center" semanticContentAttribute="spatial" translatesAutoresizingMaskIntoConstraints="NO" id="Ooz-xM-KDF" userLabel="centerview">
+                                <rect key="frame" x="0.0" y="342" width="375" height="141"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="number" translatesAutoresizingMaskIntoConstraints="NO" id="HVt-eb-Vn8">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmP-8y-JFe">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
+                                        <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="70"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="HVt-eb-Vn8" secondAttribute="bottom" id="BkE-nh-bLN"/>
+                                    <constraint firstItem="EmP-8y-JFe" firstAttribute="top" secondItem="Ooz-xM-KDF" secondAttribute="top" id="E2c-sz-JvN"/>
+                                    <constraint firstAttribute="trailing" secondItem="HVt-eb-Vn8" secondAttribute="trailing" id="Fyd-Uz-GiQ"/>
+                                    <constraint firstItem="EmP-8y-JFe" firstAttribute="leading" secondItem="Ooz-xM-KDF" secondAttribute="leading" id="ZWy-G6-IRv"/>
+                                    <constraint firstAttribute="bottom" secondItem="EmP-8y-JFe" secondAttribute="bottom" id="eOZ-W5-Uwb"/>
+                                    <constraint firstItem="HVt-eb-Vn8" firstAttribute="leading" secondItem="Ooz-xM-KDF" secondAttribute="leading" id="pJv-6o-WsM"/>
+                                    <constraint firstItem="HVt-eb-Vn8" firstAttribute="top" secondItem="Ooz-xM-KDF" secondAttribute="top" id="umb-DM-vPL"/>
+                                    <constraint firstAttribute="trailing" secondItem="EmP-8y-JFe" secondAttribute="trailing" id="zVN-zb-jif"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PhM-xd-hEY">
+                                <rect key="frame" x="69" y="503" width="236" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HVDComicSerifPro" family="HVD Comic Serif Pro" pointSize="41"/>
+                                <textInputTraits key="textInputTraits" textContentType="one-time-code"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.96841138601303101" green="0.86039398638420472" blue="0.67572092073790146" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="7aC-zy-S4m" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-15" id="211-Ee-wXS"/>
+                            <constraint firstItem="Ooz-xM-KDF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E4z-bl-n2b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ooz-xM-KDF" secondAttribute="trailing" id="FZv-Du-Gfj"/>
+                            <constraint firstItem="7aC-zy-S4m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="GFx-xq-SGJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mco-Ay-GjI" secondAttribute="trailing" constant="67" id="IKj-tO-jR8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ooz-xM-KDF" secondAttribute="bottom" constant="295" id="Kv0-Md-yQw"/>
+                            <constraint firstItem="mco-Ay-GjI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="Oeu-px-y0w"/>
+                            <constraint firstItem="7aC-zy-S4m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="kaV-oo-ShQ"/>
+                            <constraint firstItem="mco-Ay-GjI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="lqk-JW-dtE"/>
+                            <constraint firstItem="Ooz-xM-KDF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="295" id="vsN-jd-pO0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centerLabel" destination="EmP-8y-JFe" id="2tj-wK-nNx"/>
+                        <outlet property="moneyLabel" destination="dbn-xz-voD" id="gxe-b1-xix"/>
+                        <outlet property="timeLabel" destination="VZe-dz-6mV" id="6Uq-Np-34N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42.399999999999999" y="-28.078817733990149"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="number" width="300" height="122"/>
+        <image name="score" width="119" height="51"/>
+        <image name="time" width="149" height="49"/>
+    </resources>
+</document>
