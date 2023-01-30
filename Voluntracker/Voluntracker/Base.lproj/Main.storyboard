@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Klu-mJ-uWQ">
-                                <rect key="frame" x="10" y="243" width="365" height="335"/>
+                                <rect key="frame" x="20" y="218" width="355" height="335"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="PaX-pV-tKm" userLabel="fields">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
@@ -84,20 +84,39 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Klu-mJ-uWQ" secondAttribute="bottom" constant="200" id="YOE-1e-0RT"/>
-                            <constraint firstItem="Klu-mJ-uWQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ZfL-oy-yPU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Klu-mJ-uWQ" secondAttribute="bottom" constant="225" id="YOE-1e-0RT"/>
+                            <constraint firstItem="Klu-mJ-uWQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZfL-oy-yPU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Klu-mJ-uWQ" secondAttribute="trailing" id="cuc-zV-m09"/>
-                            <constraint firstItem="Klu-mJ-uWQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="uqR-qs-cfj"/>
+                            <constraint firstItem="Klu-mJ-uWQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="uqR-qs-cfj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="dXu-9i-5zG"/>
                     <connections>
-                        <segue destination="WjG-89-zKz" kind="show" identifier="Login" id="x3f-GI-8sn"/>
+                        <outlet property="passOutlet" destination="FOB-IL-gvs" id="ZZt-qX-OTR"/>
+                        <outlet property="userOutlet" destination="6Xp-Pq-FQr" id="HAa-Y4-D8J"/>
+                        <segue destination="WjG-89-zKz" kind="show" identifier="login" id="x3f-GI-8sn"/>
+                        <segue destination="VeV-Xw-xOy" kind="show" identifier="forgot" id="gts-1Q-frL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1055.2" y="-27.339901477832512"/>
+        </scene>
+        <!--Forgot Default-->
+        <scene sceneID="Ej3-R2-ayu">
+            <objects>
+                <viewController id="VeV-Xw-xOy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FnF-uj-Bet">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JLt-bz-WDS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Forgot Default" id="4dU-SB-BbB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Xa-8o-smQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="-279"/>
         </scene>
         <!--Home-->
         <scene sceneID="L0U-el-XVW">
@@ -133,7 +152,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWr-aV-j6b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.8" y="-27.339901477832512"/>
+            <point key="canvasLocation" x="218" y="-27"/>
         </scene>
     </scenes>
     <resources>
