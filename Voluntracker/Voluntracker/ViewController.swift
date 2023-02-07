@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var userOutlet: UITextField!
     @IBOutlet weak var passOutlet: UITextField!
     
+    
+    
     @IBAction func userText(_ sender: UITextField) {
         username = sender.text ?? ""
     }
@@ -32,7 +34,7 @@ class ViewController: UIViewController {
         let capturedPW: String = password
         let capturedUN: String = username
         
-        let activeUser: User = nil
+        var activeUser: User? = nil
         print("login triggered")
         do {
             activeUser = try getUser(un: capturedUN).get()
@@ -41,17 +43,50 @@ class ViewController: UIViewController {
             print("invalid username")
                 //prompt to create account with these credentials or cancel
         }
-        if(capturedPW = activeUser.password){
+        if(capturedPW == activeUser?.password){
             
         }
         
     }
     
     @IBAction func UNButton(_ sender: Any) {
-        
+        if(password.isEmpty){
+            //alert
+            var dialogMessage = UIAlertController(title: "Reset Password", message: "No password entered, type in your password and tap \"Forgot Username\" again.", preferredStyle: .alert)
+            
+            //add button
+            let ok = UIAlertAction(title: "Dismiss", style: .default, handler: { (action) -> Void in
+                self.performSegue(withIdentifier: "forgotUser", sender: sender)
+             })
+            
+            dialogMessage.addAction(ok)
+
+            //present alert
+            self.present(dialogMessage, animated: true, completion: nil)
+        }
+        else{
+                performSegue(withIdentifier: "forgotUser", sender: sender)
+            }
     }
     
     @IBAction func PWButton(_ sender: Any) {
+        if(username.isEmpty){
+            //alert
+            var dialogMessage = UIAlertController(title: "Reset Password", message: "No username entered, type in your username and tap \"Forgot Password\" again.", preferredStyle: .alert)
+            
+            //add button
+            let ok = UIAlertAction(title: "Dismiss", style: .default, handler: { (action) -> Void in
+                self.performSegue(withIdentifier: "forgotUserPass", sender: sender)
+             })
+            
+            dialogMessage.addAction(ok)
+
+            //present alert
+            self.present(dialogMessage, animated: true, completion: nil)
+        }
+        else{
+                performSegue(withIdentifier: "forgotPass", sender: sender)
+            }
     }
     
     struct User: Codable {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		548A68C72992AC300026267F /* ForgotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A68C62992AC300026267F /* ForgotViewController.swift */; };
 		54AE399D2982CF0900656285 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE399C2982CF0900656285 /* AppDelegate.swift */; };
 		54AE399F2982CF0900656285 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE399E2982CF0900656285 /* SceneDelegate.swift */; };
 		54AE39A12982CF0900656285 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AE39A02982CF0900656285 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		548A68C62992AC300026267F /* ForgotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewController.swift; sourceTree = "<group>"; };
 		54AE39992982CF0900656285 /* Voluntracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voluntracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54AE399C2982CF0900656285 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54AE399E2982CF0900656285 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				54AE39A52982CF0B00656285 /* Assets.xcassets */,
 				54AE39A72982CF0B00656285 /* LaunchScreen.storyboard */,
 				54AE39AA2982CF0B00656285 /* Info.plist */,
+				548A68C62992AC300026267F /* ForgotViewController.swift */,
 			);
 			path = Voluntracker;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				54AE39B12982DE0B00656285 /* LoginViewController.swift in Sources */,
 				54AE39A12982CF0900656285 /* ViewController.swift in Sources */,
 				54AE399D2982CF0900656285 /* AppDelegate.swift in Sources */,
+				548A68C72992AC300026267F /* ForgotViewController.swift in Sources */,
 				54AE399F2982CF0900656285 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

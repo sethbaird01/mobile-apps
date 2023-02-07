@@ -95,7 +95,8 @@
                         <outlet property="passOutlet" destination="FOB-IL-gvs" id="ZZt-qX-OTR"/>
                         <outlet property="userOutlet" destination="6Xp-Pq-FQr" id="HAa-Y4-D8J"/>
                         <segue destination="WjG-89-zKz" kind="show" identifier="login" id="x3f-GI-8sn"/>
-                        <segue destination="VeV-Xw-xOy" kind="show" identifier="forgot" id="gts-1Q-frL"/>
+                        <segue destination="VeV-Xw-xOy" kind="show" identifier="forgotUser" id="gts-1Q-frL"/>
+                        <segue destination="VeV-Xw-xOy" kind="show" identifier="forgotPass" id="AN0-ZD-Yxz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,14 +106,54 @@
         <!--Forgot Default-->
         <scene sceneID="Ej3-R2-ayu">
             <objects>
-                <viewController id="VeV-Xw-xOy" sceneMemberID="viewController">
+                <viewController id="VeV-Xw-xOy" customClass="ForgotViewController" customModule="Voluntracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FnF-uj-Bet">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pIw-5O-pZJ">
+                                <rect key="frame" x="20" y="338.33333333333331" width="355" height="135.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter new {credential}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaL-Df-S4w">
+                                        <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="{credential}" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q2K-ob-vy7">
+                                        <rect key="frame" x="0.0" y="47.333333333333371" width="102.33333333333333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="credEditing:" destination="VeV-Xw-xOy" eventType="editingChanged" id="CoU-Hg-Pyh"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTR-8S-nhO">
+                                        <rect key="frame" x="0.0" y="101.33333333333337" width="61" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save" titleAlignment="leading"/>
+                                        <connections>
+                                            <action selector="saveButton:" destination="VeV-Xw-xOy" eventType="touchUpInside" id="VNt-fN-D9j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JLt-bz-WDS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pIw-5O-pZJ" firstAttribute="leading" secondItem="JLt-bz-WDS" secondAttribute="leading" constant="20" id="BtH-4E-rH6"/>
+                            <constraint firstItem="JLt-bz-WDS" firstAttribute="trailing" secondItem="pIw-5O-pZJ" secondAttribute="trailing" id="EQE-jX-nKY"/>
+                            <constraint firstItem="pIw-5O-pZJ" firstAttribute="centerY" secondItem="FnF-uj-Bet" secondAttribute="centerY" id="Uz8-zA-dVI"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Forgot Default" id="4dU-SB-BbB"/>
+                    <navigationItem key="navigationItem" title="Forgot Default" id="4dU-SB-BbB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="dm8-AB-j7C"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="credEntry" destination="q2K-ob-vy7" id="L9A-rr-hTv"/>
+                        <outlet property="credsTitle" destination="aaL-Df-S4w" id="w9l-35-MNh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Xa-8o-smQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,6 +196,9 @@
             <point key="canvasLocation" x="218" y="-27"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="AN0-ZD-Yxz"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
