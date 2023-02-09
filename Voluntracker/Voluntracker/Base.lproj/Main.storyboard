@@ -25,7 +25,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Xp-Pq-FQr">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
                                                 <connections>
                                                     <action selector="userText:" destination="BYZ-38-t0r" eventType="editingChanged" id="dOB-kk-kYl"/>
                                                 </connections>
@@ -46,7 +46,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" axis="vertical" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xKO-aE-MT5" userLabel="buttons">
-                                        <rect key="frame" x="0.0" y="192" width="156.66666666666666" height="143"/>
+                                        <rect key="frame" x="0.0" y="192" width="151.66666666666666" height="143"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRq-Mj-f9N" userLabel="Log In">
                                                 <rect key="frame" x="0.0" y="0.0" width="70.333333333333329" height="34.333333333333336"/>
@@ -57,9 +57,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgZ-St-CQ4">
-                                                <rect key="frame" x="0.0" y="54.333333333333314" width="156.66666666666666" height="34.333333333333343"/>
+                                                <rect key="frame" x="0.0" y="54.333333333333314" width="84" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Forgot Username"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
                                                 <connections>
                                                     <action selector="UNButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uLb-ZH-ZKO"/>
                                                 </connections>
@@ -95,7 +95,7 @@
                         <outlet property="passOutlet" destination="FOB-IL-gvs" id="ZZt-qX-OTR"/>
                         <outlet property="userOutlet" destination="6Xp-Pq-FQr" id="HAa-Y4-D8J"/>
                         <segue destination="WjG-89-zKz" kind="show" identifier="login" id="x3f-GI-8sn"/>
-                        <segue destination="VeV-Xw-xOy" kind="show" identifier="forgotUser" id="gts-1Q-frL"/>
+                        <segue destination="VeV-Xw-xOy" kind="show" identifier="create" id="gts-1Q-frL"/>
                         <segue destination="VeV-Xw-xOy" kind="show" identifier="forgotPass" id="AN0-ZD-Yxz"/>
                     </connections>
                 </viewController>
@@ -103,10 +103,10 @@
             </objects>
             <point key="canvasLocation" x="1055.2" y="-27.339901477832512"/>
         </scene>
-        <!--Forgot Default-->
+        <!--PasswordUI-->
         <scene sceneID="Ej3-R2-ayu">
             <objects>
-                <viewController id="VeV-Xw-xOy" customClass="ForgotViewController" customModule="Voluntracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VeV-Xw-xOy" customClass="PasswordViewController" customModule="Voluntracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FnF-uj-Bet">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,18 +114,22 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pIw-5O-pZJ">
                                 <rect key="frame" x="20" y="338.33333333333331" width="355" height="135.66666666666669"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter new {credential}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaL-Df-S4w">
-                                        <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="20.333333333333332"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="credentialtext" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaL-Df-S4w">
+                                        <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="{credential}" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q2K-ob-vy7">
-                                        <rect key="frame" x="0.0" y="47.333333333333371" width="102.33333333333333" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q2K-ob-vy7">
+                                        <rect key="frame" x="0.0" y="47.333333333333371" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Fxm-Fc-aso"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
                                         <connections>
                                             <action selector="credEditing:" destination="VeV-Xw-xOy" eventType="editingChanged" id="CoU-Hg-Pyh"/>
+                                            <action selector="saveButton:" destination="VeV-Xw-xOy" eventType="primaryActionTriggered" id="GQS-L0-AdG"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTR-8S-nhO">
@@ -147,7 +151,7 @@
                             <constraint firstItem="pIw-5O-pZJ" firstAttribute="centerY" secondItem="FnF-uj-Bet" secondAttribute="centerY" id="Uz8-zA-dVI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Forgot Default" id="4dU-SB-BbB">
+                    <navigationItem key="navigationItem" title="PasswordUI" id="4dU-SB-BbB">
                         <barButtonItem key="backBarButtonItem" title="Back" id="dm8-AB-j7C"/>
                     </navigationItem>
                     <connections>
@@ -197,7 +201,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AN0-ZD-Yxz"/>
+        <segue reference="gts-1Q-frL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

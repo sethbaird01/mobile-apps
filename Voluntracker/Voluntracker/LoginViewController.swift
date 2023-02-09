@@ -9,6 +9,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    var activeUser: CredentialStore.User? = nil
+    var defaults: UserDefaults? = nil
+    //written on segue prepare()
 
     override func viewDidLoad() {
         super.viewDidLoad()
