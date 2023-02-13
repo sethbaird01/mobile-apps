@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -61,7 +62,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
                                                 <connections>
-                                                    <action selector="UNButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uLb-ZH-ZKO"/>
+                                                    <action selector="SignUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y2B-cN-M40"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6f-58-uj6">
@@ -126,7 +127,7 @@
                                             <constraint firstAttribute="width" constant="200" id="Fxm-Fc-aso"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES"/>
                                         <connections>
                                             <action selector="credEditing:" destination="VeV-Xw-xOy" eventType="editingChanged" id="CoU-Hg-Pyh"/>
                                             <action selector="saveButton:" destination="VeV-Xw-xOy" eventType="primaryActionTriggered" id="GQS-L0-AdG"/>
@@ -170,16 +171,86 @@
                     <view key="view" contentMode="scaleToFill" id="3G8-jn-Jqd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3NJ-KS-bdW">
+                                <rect key="frame" x="35" y="293" width="305" height="178"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage of goal reached:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv4-WT-MgK">
+                                        <rect key="frame" x="0.0" y="0.0" width="273.66666666666669" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="DuL-lI-oaa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="1IQ-rv-9cc">
+                                        <rect key="frame" x="0.0" y="110" width="305" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ng-Fs-8q0">
+                                                <rect key="frame" x="0.0" y="0.0" width="305" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="Nj1-ZG-Ndz"/>
+                                                    <constraint firstAttribute="height" constant="30" id="TVZ-1F-gbf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-VZ-TMe">
+                                                <rect key="frame" x="0.0" y="2" width="30" height="46.333333333333329"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="22x-UE-fm4"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Iel-R0-K5Z"/>
+                                                </constraints>
+                                                <imageReference key="image" image="trophy.fill" catalog="system" symbolScale="small"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vhF-N1-w96">
+                                        <rect key="frame" x="0.0" y="170" width="305" height="8"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="8" id="Rdm-tN-5Ae"/>
+                                        </constraints>
+                                    </progressView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1IQ-rv-9cc" secondAttribute="trailing" id="Ljv-oB-XRR"/>
+                                    <constraint firstItem="1IQ-rv-9cc" firstAttribute="leading" secondItem="3NJ-KS-bdW" secondAttribute="leading" id="cPE-S1-1zJ"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSV-gn-cSO">
+                                <rect key="frame" x="35" y="510.99999999999994" width="94.333333333333314" height="34.333333333333314"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Log Hour"/>
+                                <connections>
+                                    <action selector="logButton:" destination="WjG-89-zKz" eventType="touchUpInside" id="icJ-el-eVW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Z8P-CK-DIr"/>
                         <color key="backgroundColor" red="0.75235400102005401" green="0.91460096221609211" blue="0.80327640665764721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Z8P-CK-DIr" firstAttribute="bottom" secondItem="3NJ-KS-bdW" secondAttribute="bottom" constant="200" id="J0p-Kk-T5e"/>
+                            <constraint firstItem="3NJ-KS-bdW" firstAttribute="top" secondItem="Z8P-CK-DIr" secondAttribute="top" constant="150" id="PAA-UI-bpL"/>
+                            <constraint firstItem="3NJ-KS-bdW" firstAttribute="leading" secondItem="Z8P-CK-DIr" secondAttribute="leading" constant="35" id="QO1-KO-doz"/>
+                            <constraint firstAttribute="trailing" secondItem="3NJ-KS-bdW" secondAttribute="trailing" constant="35" id="Vim-ku-eox"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="K1N-kJ-B0p">
                         <barButtonItem key="backBarButtonItem" title="Log Out" id="554-6z-1Sb"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="buttonOut" destination="iSV-gn-cSO" id="iCk-cj-MtZ"/>
+                        <outlet property="imageOut" destination="K1b-VZ-TMe" id="Npb-kx-Cdk"/>
+                        <outlet property="percentageOut" destination="4Ng-Fs-8q0" id="B3C-vZ-c4V"/>
+                        <outlet property="progressOut" destination="vhF-N1-w96" id="IC4-re-A41"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLE-XJ-RIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="352"/>
+            <point key="canvasLocation" x="1840.8" y="351.72413793103448"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2sq-3c-I9a">
@@ -204,6 +275,7 @@
         <segue reference="gts-1Q-frL"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="trophy.fill" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

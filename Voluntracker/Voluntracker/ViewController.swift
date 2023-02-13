@@ -32,12 +32,14 @@ class ViewController: UIViewController {
     @IBAction func LogInButton(_ sender: Any) {
         let capturedPW: String = password
         let capturedUN: String = username
+        passOutlet.text = ""
         
         do {
             logInUser = try CredentialStore.getUser(un: capturedUN).get()
             }
             catch _ {
             print("invalid username")
+                userOutlet.text = ""
                 //alert
                 let dialogMessage = UIAlertController(title: "Username not found", message: "No account was made with this username, enter the correct one or tap \"Sign Up\" to create a new account.", preferredStyle: .alert)
                 
@@ -50,6 +52,7 @@ class ViewController: UIViewController {
                 self.present(dialogMessage, animated: true, completion: nil)
         }
         if(capturedPW == logInUser?.password){
+            userOutlet.text = ""
             performSegue(withIdentifier: "login", sender: self)
         }else{
             //alert
@@ -80,7 +83,20 @@ class ViewController: UIViewController {
             self.present(dialogMessage, animated: true, completion: nil)
         }
         else{
+            if(CredentialStore.contains(un: username)){
+                //alert
+                let dialogMessage = UIAlertController(title: "Create Account", message: "Username already in use. Please enter a new username and try again.", preferredStyle: .alert)
+                
+                //add button
+                let ok = UIAlertAction(title: "Dismiss", style: .default)
+                
+                dialogMessage.addAction(ok)
+
+                //present alert
+                self.present(dialogMessage, animated: true, completion: nil)
+            }else{
                 performSegue(withIdentifier: "create", sender: self)
+            }
             }
     }
     
@@ -116,7 +132,7 @@ class ViewController: UIViewController {
 
             //present alert
             self.present(dialogMessage, animated: true, completion: nil)
-        } else if CredentialStore.contains(un: username){
+        } else if !CredentialStore.contains(un: username){
             //alert
             let dialogMessage = UIAlertController(title: "Reset Password", message: "No account found under this username, please type in a valid username and tap \"Forgot Password\" again.", preferredStyle: .alert)
             
@@ -132,7 +148,6 @@ class ViewController: UIViewController {
                 performSegue(withIdentifier: "forgotPass", sender: self)
             }
     }
-    
     
 }
 

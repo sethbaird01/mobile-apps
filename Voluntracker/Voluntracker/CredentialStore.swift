@@ -10,8 +10,9 @@ import Foundation
 class CredentialStore {
 
     struct User: Codable {
-        let username, password: String
-        let hours, goal: Int
+        let username: String
+        var password: String
+        var hours, goal: Int
     }
     
     static func printAllUsers() {
@@ -38,6 +39,8 @@ class CredentialStore {
             let data = try JSONEncoder().encode(u)
             UserDefaults.standard.set(data, forKey: u.username)
 //            print("Stored element with username \(u.username)")
+            print("store updated")
+            printAllUsers()
         } catch let error {
             print("JSON error \(error) on username \(u.username)")
         }
@@ -52,11 +55,41 @@ class CredentialStore {
         }
     }
     
-    static func setPassword(un: String, pw: String){
-        let oldUser = getUser(un: un)
-        //mutate oldPassword
-        //create new user
-        //store new user under same key thus overwriting
+    static func setPassword(un: String, pw: String) -> Result<User, Error>{
+        do {
+            var currUser = try getUser(un: un).get()
+            currUser.password = pw
+            storeUser(u: currUser)
+            print("store updated")
+            printAllUsers()
+            return .success(currUser)
+        } catch let err {
+            print("No such user \(un)")
+            return .failure(err)
+        }
+    }
+    
+    static func setGoal(un: String, newGoal: Int) -> Result<User, Error>{
+        do {
+            var currUser = try getUser(un: un).get()
+            currUser.goal = newGoal
+            storeUser(u: currUser)
+            print("store updated")
+            printAllUsers()
+            return .success(currUser)
+        } catch let err {
+            print("No such user \(un)")
+            return .failure(err)
+        }
+    }
+    
+    static func updateHoursTo(user: User, newHours: Int){
+            var currUser = user
+            currUser.hours = newHours
+            storeUser(u: currUser)
+        
+            print("store updated")
+            printAllUsers()
     }
     
     static func getUser(un: String) -> Result<User, Error>{
@@ -68,6 +101,10 @@ class CredentialStore {
             print("No such user \(un)")
             return .failure(err)
         }
+    }
+    
+    static func removeUser(un: String){
+            UserDefaults.standard.removeObject(forKey: un)
     }
     
 }
