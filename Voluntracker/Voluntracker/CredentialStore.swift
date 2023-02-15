@@ -18,7 +18,6 @@ class CredentialStore {
     static func printAllUsers() {
         for (_, val) in
                 UserDefaults.standard.dictionaryRepresentation() {
-//            print("data encountered: \(val)")
 
             if let value = val as? Data {
                 do{
@@ -38,7 +37,6 @@ class CredentialStore {
         do {
             let data = try JSONEncoder().encode(u)
             UserDefaults.standard.set(data, forKey: u.username)
-//            print("Stored element with username \(u.username)")
             print("store updated")
             printAllUsers()
         } catch let error {
@@ -83,19 +81,19 @@ class CredentialStore {
         }
     }
     
-    static func updateHoursTo(user: User, newHours: Int){
+    static func updateHours(user: User, newHours: Int) -> User{
             var currUser = user
             currUser.hours = newHours
             storeUser(u: currUser)
         
             print("store updated")
-            printAllUsers()
+        print("\(currUser.username) -> \(newHours)")
+        return currUser
     }
     
     static func getUser(un: String) -> Result<User, Error>{
         do {
             let data = try JSONDecoder().decode(User.self, from: UserDefaults.standard.data(forKey: un) ?? Data())
-//            print("Got element with username \(un), password is \((data as User).password)")
             return .success(data)
         } catch let err {
             print("No such user \(un)")

@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        CredentialStore.removeUser(un: "test")
         CredentialStore.printAllUsers()
     }
 

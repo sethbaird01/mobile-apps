@@ -24,26 +24,28 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        //MARK: TODO check goal hours on update and send alert if reached , also make image unhidden , also change button into reset
-        
-        // Do any additional setup after loading the view.
     }
     @IBAction func logButton(_ sender: Any) {
         if(resetMode){
-            CredentialStore.updateHoursTo(user: activeUser!, newHours: 0)
+            activeUser = CredentialStore.updateHours(user: activeUser!, newHours: 0)
+            resetMode = false
+            alerted = false
+            imageOut.isHidden = true
+            buttonOut.setTitle("Log Hour", for: .normal)
         }else{
-            CredentialStore.updateHoursTo(user: activeUser!, newHours: activeUser!.hours+1)
+            activeUser = CredentialStore.updateHours(user: activeUser!, newHours: activeUser!.hours+1)
         }
         updateUI()
     }
     
     func updateUI(){
-        var percentage: Double = (Double(activeUser!.hours)/Double(activeUser!.goal))
-        progressOut.progress = Float(percentage)
+        let percentage: Double = (Double(activeUser!.hours)/Double(activeUser!.goal))
+        print(Float(percentage))
+        progressOut.setProgress(Float(percentage), animated: true)
         percentageOut.text = "\(Int(percentage*100))%"
         if(activeUser!.hours >= activeUser!.goal){
             imageOut.isHidden = false
-            buttonOut.titleLabel?.text = "Reset"
+            buttonOut.setTitle("Reset", for: .normal)
             resetMode = true
             if(!alerted){
                 alerted = true
