@@ -40,7 +40,6 @@ class LoginViewController: UIViewController {
     
     func updateUI(){
         let percentage: Double = (Double(activeUser!.hours)/Double(activeUser!.goal))
-        print(Float(percentage))
         progressOut.setProgress(Float(percentage), animated: true)
         percentageOut.text = "\(Int(percentage*100))%"
         if(activeUser!.hours >= activeUser!.goal){
@@ -49,16 +48,13 @@ class LoginViewController: UIViewController {
             resetMode = true
             if(!alerted){
                 alerted = true
-                //alert
-                let dialogMessage = UIAlertController(title: "Goal reached!", message: "Congratulations on meeting your goal! You can reset back to 0 with the \"Reset\" button.", preferredStyle: .alert)
+                    let dialogMessage = UIAlertController(title: "Goal reached!", message: "Congratulations on meeting your goal! You can reset back to 0 with the \"Reset\" button.", preferredStyle: .alert)
                 
-                //add button
-                let ok = UIAlertAction(title: "Dismiss", style: .default)
+                    let ok = UIAlertAction(title: "Dismiss", style: .default)
                 
                 dialogMessage.addAction(ok)
 
-                //present alert
-                self.present(dialogMessage, animated: true, completion: nil)
+                    self.present(dialogMessage, animated: true, completion: nil)
             }
         }
     }
