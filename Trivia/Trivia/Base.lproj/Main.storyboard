@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5g3-iL-q7m">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setup-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfc-CO-fG7">
+                                <rect key="frame" x="10" y="297" width="355" height="216"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gp-Uh-Pok">
+                                <rect key="frame" x="10" y="463" width="355" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6gp-Uh-Pok" secondAttribute="bottom" constant="50" id="IFp-gd-9wO"/>
+                            <constraint firstItem="6gp-Uh-Pok" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="LFx-aP-fAV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tfc-CO-fG7" secondAttribute="trailing" constant="10" id="MZO-1p-vRP"/>
+                            <constraint firstItem="Tfc-CO-fG7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="SnY-8z-gzv"/>
+                            <constraint firstItem="6gp-Uh-Pok" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iHa-JW-054"/>
+                            <constraint firstItem="Tfc-CO-fG7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="uNM-4j-e2a"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Setup" image="list.bullet.circle" catalog="system" id="LQe-Fj-dCC"/>
+                    <connections>
+                        <outlet property="categoryPicker" destination="Tfc-CO-fG7" id="kZo-Py-BUS"/>
+                        <outlet property="numberPicker" destination="6gp-Uh-Pok" id="IX1-qU-vwU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829.60000000000002" y="-999.01477832512319"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="pH9-pC-X5N">
+            <objects>
+                <viewController id="IPi-I2-ZxP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CbS-tY-f2H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ImC-bZ-BKg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Results" image="checkmark.circle" catalog="system" id="g3o-rl-6qy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xmv-IW-Z9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="-2"/>
+        </scene>
+        <!--Questions-->
+        <scene sceneID="900-jn-uTp">
+            <objects>
+                <viewController id="kG5-N8-nla" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dp4-xC-BMZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8zZ-w4-NKU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Questions" image="questionmark.circle" catalog="system" id="aia-Et-GUr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMQ-yL-5Ig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="-356"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Nbn-Mb-V0T">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5g3-iL-q7m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I2Z-qE-rrb">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="e2U-7j-YHS"/>
+                        <segue destination="kG5-N8-nla" kind="relationship" relationship="viewControllers" id="8qn-D2-oLR"/>
+                        <segue destination="IPi-I2-ZxP" kind="relationship" relationship="viewControllers" id="XS4-ZX-0nk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zub-Rw-Py8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="-709.35960591133005"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="123"/>
+        <image name="list.bullet.circle" catalog="system" width="128" height="123"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
