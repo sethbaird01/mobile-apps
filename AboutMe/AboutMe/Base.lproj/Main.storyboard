@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eAV-8c-N0o">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bio-->
+        <scene sceneID="IMe-Wt-gIh">
+            <objects>
+                <viewController title="Bio" id="9Bg-Aa-GJK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wQi-tM-b1T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NP8-Rn-cU4">
+                                <rect key="frame" x="20" y="247" width="335" height="282"/>
+                                <string key="text">Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio Bio</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="a0N-sv-Ax2"/>
+                        <color key="backgroundColor" red="0.77396398251657905" green="0.86078917980194092" blue="0.77252526324619486" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="NP8-Rn-cU4" firstAttribute="leading" secondItem="a0N-sv-Ax2" secondAttribute="leading" constant="20" id="6a7-za-miZ"/>
+                            <constraint firstAttribute="trailing" secondItem="NP8-Rn-cU4" secondAttribute="trailing" constant="20" id="Csp-WB-hIk"/>
+                            <constraint firstItem="NP8-Rn-cU4" firstAttribute="top" secondItem="a0N-sv-Ax2" secondAttribute="top" constant="200" id="QuX-Pw-geb"/>
+                            <constraint firstItem="a0N-sv-Ax2" firstAttribute="bottom" secondItem="NP8-Rn-cU4" secondAttribute="bottom" constant="200" id="Tar-fW-ThA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bio" image="text.book.closed.fill" catalog="system" id="6XN-34-KIT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Aj-BA-7oE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="634.72906403940885"/>
+        </scene>
+        <!--Family-->
+        <scene sceneID="ACc-eu-S56">
+            <objects>
+                <viewController title="Family" id="Vcl-hJ-Hxb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2PY-5v-oKZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jla-Ad-RAT">
+                                <rect key="frame" x="20" y="247" width="335" height="282"/>
+                                <string key="text">Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family Family </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fIg-rL-KmU"/>
+                        <color key="backgroundColor" red="1" green="0.93676343796656247" blue="0.81797462545590927" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Jla-Ad-RAT" firstAttribute="leading" secondItem="2PY-5v-oKZ" secondAttribute="leading" constant="20" id="85k-Sw-ivo"/>
+                            <constraint firstItem="fIg-rL-KmU" firstAttribute="bottom" secondItem="Jla-Ad-RAT" secondAttribute="bottom" constant="200" id="Tj6-Sc-etM"/>
+                            <constraint firstItem="fIg-rL-KmU" firstAttribute="trailing" secondItem="Jla-Ad-RAT" secondAttribute="trailing" constant="20" id="dNn-Zr-elK"/>
+                            <constraint firstItem="Jla-Ad-RAT" firstAttribute="top" secondItem="fIg-rL-KmU" secondAttribute="top" constant="200" id="usk-xs-0kH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Family" image="person.3.fill" catalog="system" id="kVP-CF-vWU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3MB-bm-ail" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472.8" y="634.72906403940885"/>
+        </scene>
+        <!--Hobbies-->
+        <scene sceneID="lOD-aA-tdL">
+            <objects>
+                <viewController title="Hobbies" id="KNR-mm-D6s" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IXF-PQ-jLG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lu-aG-jqh">
+                                <rect key="frame" x="20" y="247" width="335" height="282"/>
+                                <string key="text">Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies Hobbies </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uJb-kW-Q07"/>
+                        <color key="backgroundColor" red="0.86562246773105733" green="0.94790559781581918" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="8lu-aG-jqh" firstAttribute="leading" secondItem="IXF-PQ-jLG" secondAttribute="leading" constant="20" id="UdZ-Jr-NL8"/>
+                            <constraint firstItem="uJb-kW-Q07" firstAttribute="trailing" secondItem="8lu-aG-jqh" secondAttribute="trailing" constant="20" id="Z2o-mi-dEm"/>
+                            <constraint firstItem="8lu-aG-jqh" firstAttribute="top" secondItem="uJb-kW-Q07" secondAttribute="top" constant="200" id="beT-wt-Wak"/>
+                            <constraint firstItem="uJb-kW-Q07" firstAttribute="bottom" secondItem="8lu-aG-jqh" secondAttribute="bottom" constant="200" id="qrS-FV-s87"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hobbies" image="star.fill" catalog="system" id="s9F-Aj-3X9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odr-rQ-u9R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2156" y="634.72906403940885"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Umj-ge-fqu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPy-A1-ZGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eAV-8c-N0o" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l50-kA-qPp">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9Bg-Aa-GJK" kind="relationship" relationship="viewControllers" id="lL7-1V-n97"/>
+                        <segue destination="Vcl-hJ-Hxb" kind="relationship" relationship="viewControllers" id="Rlb-M4-q4r"/>
+                        <segue destination="KNR-mm-D6s" kind="relationship" relationship="viewControllers" id="g4T-wP-46I"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="919" y="-106"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="text.book.closed.fill" catalog="system" width="115" height="128"/>
+    </resources>
+</document>
