@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TriviaDB {
+class TriviaDB{
     class Trivia {
         var q: String
         var correct: String
@@ -18,8 +18,8 @@ class TriviaDB {
             self.incorrect = incorrect
         }
     }
-    
-    public static let db : [String: [Trivia]] =
+
+    static let db : [String: [Trivia]] =
     [
     "General Knowledge" :
     [

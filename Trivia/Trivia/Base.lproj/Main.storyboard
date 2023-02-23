@@ -11,27 +11,43 @@
         <!--Setup-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SetupController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfc-CO-fG7">
-                                <rect key="frame" x="10" y="297" width="355" height="216"/>
+                            <pickerView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Tfc-CO-fG7">
+                                <rect key="frame" x="10" y="247" width="355" height="216"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gp-Uh-Pok">
-                                <rect key="frame" x="10" y="463" width="355" height="216"/>
+                                <rect key="frame" x="10" y="413" width="355" height="216"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtr-y1-OXH">
+                                <rect key="frame" x="30" y="634" width="315" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="knC-wF-hVj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="GO" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="33"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mWe-iL-Id4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6gp-Uh-Pok" secondAttribute="bottom" constant="50" id="IFp-gd-9wO"/>
-                            <constraint firstItem="6gp-Uh-Pok" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="LFx-aP-fAV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tfc-CO-fG7" secondAttribute="trailing" constant="10" id="MZO-1p-vRP"/>
-                            <constraint firstItem="Tfc-CO-fG7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="SnY-8z-gzv"/>
-                            <constraint firstItem="6gp-Uh-Pok" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iHa-JW-054"/>
-                            <constraint firstItem="Tfc-CO-fG7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="uNM-4j-e2a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mtr-y1-OXH" secondAttribute="bottom" constant="20" id="6Z9-Fx-VEn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6gp-Uh-Pok" secondAttribute="trailing" constant="10" id="9LO-3N-IwR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tfc-CO-fG7" secondAttribute="trailing" constant="10" id="DVi-gY-xyy"/>
+                            <constraint firstItem="mtr-y1-OXH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="TL1-I1-0OM"/>
+                            <constraint firstItem="Tfc-CO-fG7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="Xd0-7Q-bX0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mtr-y1-OXH" secondAttribute="trailing" constant="30" id="fIG-GR-hV7"/>
+                            <constraint firstItem="Tfc-CO-fG7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="hOR-LZ-G0P"/>
+                            <constraint firstItem="6gp-Uh-Pok" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="v1F-WH-ZKq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6gp-Uh-Pok" secondAttribute="bottom" constant="100" id="w3h-EL-uLf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Setup" image="list.bullet.circle" catalog="system" id="LQe-Fj-dCC"/>
@@ -58,12 +74,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xmv-IW-Z9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28" y="-2"/>
+            <point key="canvasLocation" x="28" y="-356"/>
         </scene>
         <!--Questions-->
         <scene sceneID="900-jn-uTp">
             <objects>
-                <viewController id="kG5-N8-nla" sceneMemberID="viewController">
+                <viewController id="kG5-N8-nla" customClass="QuestionController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dp4-xC-BMZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,6 +98,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5g3-iL-q7m" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I2Z-qE-rrb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -93,7 +110,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zub-Rw-Py8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40.799999999999997" y="-709.35960591133005"/>
+            <point key="canvasLocation" x="28" y="-999"/>
         </scene>
     </scenes>
     <resources>
