@@ -46,7 +46,6 @@
 		54B2C6F629A51B5B00C7693B = {
 			isa = PBXGroup;
 			children = (
-				54A76FC029A7B89D00C54AB3 /* PickerDelegate.swift */,
 				54B2C70129A51B5B00C7693B /* Trivia */,
 				54B2C70029A51B5B00C7693B /* Products */,
 			);
@@ -63,6 +62,7 @@
 		54B2C70129A51B5B00C7693B /* Trivia */ = {
 			isa = PBXGroup;
 			children = (
+				54A76FC029A7B89D00C54AB3 /* PickerDelegate.swift */,
 				54B2C70229A51B5B00C7693B /* AppDelegate.swift */,
 				54B2C70429A51B5B00C7693B /* SceneDelegate.swift */,
 				54B2C70629A51B5B00C7693B /* SetupController.swift */,
