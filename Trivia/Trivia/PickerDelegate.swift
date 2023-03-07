@@ -13,7 +13,6 @@ class PickerDelegate: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     var data: [Any]
     
     init(data: [Any]) {
-        print("init")
         self.data = data
     }
     
@@ -26,6 +25,14 @@ class PickerDelegate: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if(pickerView.tag == 1){
+            //category
+            SetupController.selectedCategory = data[row] as! String
+        }
+        if(pickerView.tag == 2){
+            //number
+            SetupController.selectedNumber = data[row] as! Int
+        }
         return "\(data[row])"
     }
 }

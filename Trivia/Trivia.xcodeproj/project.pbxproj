@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5412E25129B795E40057D1C7 /* ResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5412E25029B795E40057D1C7 /* ResultsController.swift */; };
 		54A76FC129A7B89D00C54AB3 /* PickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A76FC029A7B89D00C54AB3 /* PickerDelegate.swift */; };
 		54A76FC329A7C24700C54AB3 /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A76FC229A7C24700C54AB3 /* QuestionController.swift */; };
 		54B2C70329A51B5B00C7693B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B2C70229A51B5B00C7693B /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5412E25029B795E40057D1C7 /* ResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsController.swift; sourceTree = "<group>"; };
 		54A76FC029A7B89D00C54AB3 /* PickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDelegate.swift; sourceTree = "<group>"; };
 		54A76FC229A7C24700C54AB3 /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		54B2C6FF29A51B5B00C7693B /* Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,7 @@
 				54B2C71029A51B5D00C7693B /* Info.plist */,
 				54B2C71629A51B7C00C7693B /* TriviaDB.swift */,
 				54A76FC229A7C24700C54AB3 /* QuestionController.swift */,
+				5412E25029B795E40057D1C7 /* ResultsController.swift */,
 			);
 			path = Trivia;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				54B2C71729A51B7C00C7693B /* TriviaDB.swift in Sources */,
 				54B2C70529A51B5B00C7693B /* SceneDelegate.swift in Sources */,
 				54A76FC329A7C24700C54AB3 /* QuestionController.swift in Sources */,
+				5412E25129B795E40057D1C7 /* ResultsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
