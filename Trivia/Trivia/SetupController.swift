@@ -17,8 +17,8 @@ class SetupController: UIViewController {
 
     let numberPD = PickerDelegate(data: Array(arrayLiteral: 3, 4, 5, 6, 7, 8, 9, 10))
     
-    static var selectedNumber: Int = 0
-    static var selectedCategory: String = ""
+    static var selectedNumber: Int = 3
+    static var selectedCategory: String = Array(TriviaDB.db.keys)[0]
    
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -152,6 +152,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Results" image="checkmark.circle" catalog="system" id="g3o-rl-6qy"/>
+                    <connections>
+                        <outlet property="bigtext" destination="g6g-kg-OPX" id="4dt-br-t2e"/>
+                        <outlet property="categorytext" destination="ese-Ot-2As" id="qxd-pc-o3I"/>
+                        <outlet property="image" destination="Obo-05-G4x" id="E3v-r7-aOU"/>
+                        <outlet property="progress" destination="ePg-S1-tFA" id="fwd-lT-BRI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xmv-IW-Z9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,46 +171,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BqZ-kQ-okz">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BqZ-kQ-okz">
                                 <rect key="frame" x="10" y="47" width="355" height="665"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="question text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWS-xu-fAV">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="332.66666666666669"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ljE-74-8Yy">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="330"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No game in progress" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWS-xu-fAV">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="300"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUd-dk-nlx">
+                                                <rect key="frame" x="0.0" y="300" width="355" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="QuA-L8-oCF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="vdc-bA-lN6">
-                                        <rect key="frame" x="0.0" y="332.66666666666674" width="355" height="332.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="335" width="355" height="330"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ab-JC-4fo">
-                                                <rect key="frame" x="0.0" y="0.0" width="355" height="78.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="78"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="medium"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="A" cornerStyle="medium"/>
                                                 <connections>
                                                     <action selector="answerChoice:" destination="kG5-N8-nla" eventType="touchUpInside" id="YzE-zj-SyW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aA7-5F-5ym">
-                                                <rect key="frame" x="0.0" y="84.333333333333314" width="355" height="78.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="84" width="355" height="78"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="medium"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="B" cornerStyle="medium"/>
                                                 <connections>
                                                     <action selector="answerChoice:" destination="kG5-N8-nla" eventType="touchUpInside" id="b1v-R7-RWt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQR-fh-MsQ">
-                                                <rect key="frame" x="0.0" y="168.99999999999994" width="355" height="78.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="168" width="355" height="78"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="medium"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="C" cornerStyle="medium"/>
                                                 <connections>
                                                     <action selector="answerChoice:" destination="kG5-N8-nla" eventType="touchUpInside" id="Ai9-vV-FmG"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8L-uk-DuJ">
-                                                <rect key="frame" x="0.0" y="253.66666666666666" width="355" height="78.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="252" width="355" height="78"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="medium"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="D" cornerStyle="medium"/>
                                                 <connections>
                                                     <action selector="answerChoice:" destination="kG5-N8-nla" eventType="touchUpInside" id="NpU-aR-oTE"/>
                                                 </connections>
@@ -233,6 +253,7 @@
                     <connections>
                         <outlet property="mainText" destination="SWS-xu-fAV" id="NdZ-Pt-fa2"/>
                         <outlet property="progress" destination="Xe2-oG-jx6" id="w47-Hn-JhG"/>
+                        <outlet property="status" destination="yUd-dk-nlx" id="U1P-AH-9GY"/>
                         <outletCollection property="buttons" destination="5ab-JC-4fo" collectionClass="NSMutableArray" id="oig-51-Jyh"/>
                         <outletCollection property="buttons" destination="aA7-5F-5ym" collectionClass="NSMutableArray" id="t8p-aw-ETk"/>
                         <outletCollection property="buttons" destination="KQR-fh-MsQ" collectionClass="NSMutableArray" id="wYV-hV-ycV"/>

@@ -9,26 +9,38 @@ import UIKit
 
 class ResultsController: UIViewController {
     
-    var category: String = ""
-    var correct: Int = 0
-    var totalQ: Int = 0
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var bigtext: UILabel!
+    @IBOutlet weak var progress: UIProgressView!
+    @IBOutlet weak var categorytext: UILabel!
     
-
+    let progressFloat = (Float) (QuestionController.score/QuestionController.selectedNumber)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if(progressFloat >= 0.7){
+            image.image = UIImage(systemName: "rosette")
+        }else{
+            image.image = UIImage(systemName: "xmark.circle")
+        }
+        bigtext.text = "\(QuestionController.score)/\(QuestionController.selectedNumber)"
+        categorytext.text = QuestionController.selectedCategory
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        progress.setProgress(progressFloat, animated: true)
+    }
+    
     @IBAction func resetButton(_ sender: Any) {
-        SetupController.selectedNumber = 0
-        SetupController.selectedCategory = ""
+        SetupController.selectedNumber = 3
+        SetupController.selectedCategory = Array(TriviaDB.db.keys)[0]
         tabBarController?.selectedIndex = 0
-        QuestionController.selectedCategory = ""
-        //reset all other QC vars
-        category = ""
-        correct = 0
-        totalQ = 0
+
     }
     
 
