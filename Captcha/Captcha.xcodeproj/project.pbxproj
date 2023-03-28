@@ -10,6 +10,7 @@
 		540E859A29CDE46F004AE3FF /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540E859929CDE46F004AE3FF /* AudioViewController.swift */; };
 		540E859D29CDEAD9004AE3FF /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 540E859B29CDEAD8004AE3FF /* Sounds */; };
 		540E859E29CDEAD9004AE3FF /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 540E859C29CDEAD9004AE3FF /* Images */; };
+		543AED0C29D3399C0089AF68 /* CaptchaLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543AED0B29D3399C0089AF68 /* CaptchaLabel.swift */; };
 		54E4FF2729CB4705007BD030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4FF2629CB4705007BD030 /* AppDelegate.swift */; };
 		54E4FF2929CB4705007BD030 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4FF2829CB4705007BD030 /* SceneDelegate.swift */; };
 		54E4FF2B29CB4705007BD030 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E4FF2A29CB4705007BD030 /* ImageViewController.swift */; };
@@ -23,6 +24,7 @@
 		540E859929CDE46F004AE3FF /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		540E859B29CDEAD8004AE3FF /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = "../../../../../Downloads/Captcha files/Sounds"; sourceTree = "<group>"; };
 		540E859C29CDEAD9004AE3FF /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = "../../../../../Downloads/Captcha files/Images"; sourceTree = "<group>"; };
+		543AED0B29D3399C0089AF68 /* CaptchaLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptchaLabel.swift; sourceTree = "<group>"; };
 		54E4FF2329CB4705007BD030 /* Captcha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Captcha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E4FF2629CB4705007BD030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54E4FF2829CB4705007BD030 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		54E4FF2529CB4705007BD030 /* Captcha */ = {
 			isa = PBXGroup;
 			children = (
+				543AED0B29D3399C0089AF68 /* CaptchaLabel.swift */,
 				540E859C29CDEAD9004AE3FF /* Images */,
 				540E859B29CDEAD8004AE3FF /* Sounds */,
 				54E4FF3A29CB4B0C007BD030 /* CaptchaImageView.swift */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54E4FF2B29CB4705007BD030 /* ImageViewController.swift in Sources */,
+				543AED0C29D3399C0089AF68 /* CaptchaLabel.swift in Sources */,
 				54E4FF2729CB4705007BD030 /* AppDelegate.swift in Sources */,
 				54E4FF2929CB4705007BD030 /* SceneDelegate.swift in Sources */,
 				54E4FF3B29CB4B0C007BD030 /* CaptchaImageView.swift in Sources */,

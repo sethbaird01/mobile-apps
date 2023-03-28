@@ -22,37 +22,48 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="shu-b2-kky">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="330"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n1G-pi-XUW" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n1G-pi-XUW" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="157.66666666666666"/>
                                                 <gestureRecognizers/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="V5j-jG-8e2" appends="YES" id="NTJ-EJ-wRM"/>
+                                                </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Upj-Lz-gBD" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Upj-Lz-gBD" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="172.66666666666669" width="150" height="157.33333333333331"/>
                                                 <gestureRecognizers/>
                                                 <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="B64-MV-rkI" appends="YES" id="Fal-wI-0S8"/>
+                                                    <outletCollection property="gestureRecognizers" destination="B64-MV-rkI" appends="YES" id="sWW-jV-hfW"/>
                                                 </connections>
                                             </imageView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="kd2-IO-xz0"/>
+                                            <constraint firstAttribute="height" constant="330" id="sIi-Je-XND"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0i6-9v-dLt">
                                         <rect key="frame" x="165" y="0.0" width="150" height="330"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6n1-6g-Ang" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6n1-6g-Ang" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="157.66666666666666"/>
                                                 <gestureRecognizers/>
                                                 <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="u2d-gn-Fu0" appends="YES" id="F3e-wQ-Dmt"/>
+                                                    <outletCollection property="gestureRecognizers" destination="u2d-gn-Fu0" appends="YES" id="cJq-e6-wiN"/>
                                                 </connections>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Tv-AY-ASX" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Tv-AY-ASX" customClass="CaptchaImageView" customModule="Captcha" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="172.66666666666669" width="150" height="157.33333333333331"/>
                                                 <gestureRecognizers/>
                                                 <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="O3r-GH-ziQ" appends="YES" id="81b-oY-hYL"/>
+                                                    <outletCollection property="gestureRecognizers" destination="O3r-GH-ziQ" appends="YES" id="cgi-Qc-MBu"/>
                                                 </connections>
                                             </imageView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="QL2-lw-PEd"/>
+                                            <constraint firstAttribute="height" constant="330" id="uUz-tf-TUG"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -81,32 +92,32 @@
                         <outletCollection property="CIViews" destination="6n1-6g-Ang" collectionClass="NSMutableArray" id="CAh-sy-JNd"/>
                         <outletCollection property="CIViews" destination="Upj-Lz-gBD" collectionClass="NSMutableArray" id="IRM-wG-fst"/>
                         <outletCollection property="CIViews" destination="8Tv-AY-ASX" collectionClass="NSMutableArray" id="PBK-D4-8hz"/>
-                        <segue destination="1Ly-iK-RaL" kind="show" id="BoF-oS-B55"/>
+                        <segue destination="1Ly-iK-RaL" kind="show" identifier="audio" id="BoF-oS-B55"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="V5j-jG-8e2" userLabel="TG1">
                     <connections>
                         <action selector="imageButtons:" destination="BYZ-38-t0r" id="1IH-2X-cmZ"/>
-                        <outlet property="delegate" destination="n1G-pi-XUW" id="Tnd-mM-loo"/>
+                        <outlet property="delegate" destination="n1G-pi-XUW" id="wia-u9-24g"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="u2d-gn-Fu0" userLabel="TG2">
                     <connections>
                         <action selector="imageButtons:" destination="BYZ-38-t0r" id="kkA-R6-aEU"/>
-                        <outlet property="delegate" destination="6n1-6g-Ang" id="LD6-q7-Xnl"/>
+                        <outlet property="delegate" destination="6n1-6g-Ang" id="T0p-I9-UvN"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="B64-MV-rkI" userLabel="TG3">
                     <connections>
                         <action selector="imageButtons:" destination="BYZ-38-t0r" id="hsS-gv-rTo"/>
-                        <outlet property="delegate" destination="Upj-Lz-gBD" id="tiF-dd-dXi"/>
+                        <outlet property="delegate" destination="Upj-Lz-gBD" id="Fay-FW-vvJ"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="O3r-GH-ziQ" userLabel="TG4">
                     <connections>
                         <action selector="imageButtons:" destination="BYZ-38-t0r" id="2NL-2K-YL0"/>
-                        <outlet property="delegate" destination="8Tv-AY-ASX" id="Un6-18-3Aw"/>
+                        <outlet property="delegate" destination="8Tv-AY-ASX" id="sFQ-u9-OXH"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -121,59 +132,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="F6c-7v-Tmx">
-                                <rect key="frame" x="30" y="247" width="315" height="308"/>
+                                <rect key="frame" x="40" y="247" width="295" height="308"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="51A-rP-Fje">
-                                        <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="308"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="308"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBV-IY-R85">
-                                                <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="134"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBV-IY-R85" customClass="CaptchaLabel" customModule="Captcha" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="134"/>
                                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="xEg-F6-hXm" appends="YES" id="AIg-8i-tpc"/>
-                                                </connections>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5P-we-OcP">
-                                                <rect key="frame" x="0.0" y="174" width="142.66666666666666" height="134"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5P-we-OcP" customClass="CaptchaLabel" customModule="Captcha" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="174" width="132.66666666666666" height="134"/>
                                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="BEP-AN-bpJ" appends="YES" id="3MG-xW-Pd9"/>
-                                                </connections>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="2Fr-OK-PxX">
-                                        <rect key="frame" x="172.66666666666663" y="0.0" width="142.33333333333337" height="308"/>
+                                        <rect key="frame" x="162.66666666666663" y="0.0" width="132.33333333333337" height="308"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPz-hL-IdJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="134"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPz-hL-IdJ" customClass="CaptchaLabel" customModule="Captcha" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="132.33333333333334" height="134"/>
                                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="iyd-Yz-aN5" appends="YES" id="W0e-yD-YPc"/>
-                                                </connections>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXM-sy-czX">
-                                                <rect key="frame" x="0.0" y="174" width="142.33333333333334" height="134"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXM-sy-czX" customClass="CaptchaLabel" customModule="Captcha" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="174" width="132.33333333333334" height="134"/>
                                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="GSc-jH-5Ew" appends="YES" id="wJZ-48-HXW"/>
-                                                </connections>
                                             </label>
                                         </subviews>
                                     </stackView>
@@ -192,10 +191,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PbI-4W-MU8" firstAttribute="bottom" secondItem="F6c-7v-Tmx" secondAttribute="bottom" constant="200" id="8yD-Qf-HD5"/>
-                            <constraint firstItem="F6c-7v-Tmx" firstAttribute="leading" secondItem="PbI-4W-MU8" secondAttribute="leading" constant="30" id="Evx-u4-gPw"/>
+                            <constraint firstItem="F6c-7v-Tmx" firstAttribute="leading" secondItem="PbI-4W-MU8" secondAttribute="leading" constant="40" id="Evx-u4-gPw"/>
                             <constraint firstItem="PbI-4W-MU8" firstAttribute="trailing" secondItem="GKE-mC-ZW9" secondAttribute="trailing" constant="110" id="IRV-Y3-Mc8"/>
                             <constraint firstItem="F6c-7v-Tmx" firstAttribute="top" secondItem="PbI-4W-MU8" secondAttribute="top" constant="200" id="Rch-Lm-fj3"/>
-                            <constraint firstAttribute="trailing" secondItem="F6c-7v-Tmx" secondAttribute="trailing" constant="30" id="eES-sp-d1z"/>
+                            <constraint firstAttribute="trailing" secondItem="F6c-7v-Tmx" secondAttribute="trailing" constant="40" id="eES-sp-d1z"/>
                             <constraint firstItem="GKE-mC-ZW9" firstAttribute="leading" secondItem="PbI-4W-MU8" secondAttribute="leading" constant="110" id="eYA-G0-LLc"/>
                             <constraint firstItem="F6c-7v-Tmx" firstAttribute="top" secondItem="GKE-mC-ZW9" secondAttribute="bottom" constant="25" id="hRW-nQ-jxf"/>
                         </constraints>
@@ -206,6 +205,7 @@
                         <outletCollection property="textCollection" destination="BPz-hL-IdJ" collectionClass="NSMutableArray" id="quB-gi-3DI"/>
                         <outletCollection property="textCollection" destination="d5P-we-OcP" collectionClass="NSMutableArray" id="KEw-jo-Xgt"/>
                         <outletCollection property="textCollection" destination="yXM-sy-czX" collectionClass="NSMutableArray" id="wio-GP-3Fj"/>
+                        <segue destination="akS-6e-4A6" kind="show" id="G0j-oq-bfR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMo-nT-XoF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -234,7 +234,37 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="701.52671755725191" y="-35.211267605633807"/>
+            <point key="canvasLocation" x="762" y="-35"/>
+        </scene>
+        <!--Complete-->
+        <scene sceneID="cQa-F4-z7G">
+            <objects>
+                <viewController id="akS-6e-4A6" userLabel="Complete" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="exg-1h-2pf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification complete, you are most likely not a robot" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGN-Jr-4Px">
+                                <rect key="frame" x="75" y="347" width="225" height="108"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="teU-28-mWI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="teU-28-mWI" firstAttribute="bottom" secondItem="IGN-Jr-4Px" secondAttribute="bottom" constant="300" id="W8X-5y-F6S"/>
+                            <constraint firstItem="teU-28-mWI" firstAttribute="trailing" secondItem="IGN-Jr-4Px" secondAttribute="trailing" constant="75" id="sBf-JK-R94"/>
+                            <constraint firstItem="IGN-Jr-4Px" firstAttribute="top" secondItem="teU-28-mWI" secondAttribute="top" constant="300" id="yKk-PU-rSw"/>
+                            <constraint firstItem="IGN-Jr-4Px" firstAttribute="leading" secondItem="teU-28-mWI" secondAttribute="leading" constant="75" id="ymQ-NL-xa4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mDR-DU-hsV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5f-EN-ESn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1550" y="-35"/>
         </scene>
     </scenes>
     <resources>
