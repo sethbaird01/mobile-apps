@@ -9,6 +9,7 @@ import UIKit
 
 class CaptchaImageView: UIImageView {
     
+    //given shake code
     func shake() {
         let animation = CABasicAnimation(keyPath: "position")
         

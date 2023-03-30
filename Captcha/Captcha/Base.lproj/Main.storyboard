@@ -92,7 +92,7 @@
                         <outletCollection property="CIViews" destination="6n1-6g-Ang" collectionClass="NSMutableArray" id="CAh-sy-JNd"/>
                         <outletCollection property="CIViews" destination="Upj-Lz-gBD" collectionClass="NSMutableArray" id="IRM-wG-fst"/>
                         <outletCollection property="CIViews" destination="8Tv-AY-ASX" collectionClass="NSMutableArray" id="PBK-D4-8hz"/>
-                        <segue destination="1Ly-iK-RaL" kind="show" identifier="audio" id="BoF-oS-B55"/>
+                        <segue destination="1Ly-iK-RaL" kind="presentation" identifier="audio" modalPresentationStyle="fullScreen" id="BoF-oS-B55"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -128,56 +128,9 @@
             <objects>
                 <viewController title="AudioCaptchas" id="1Ly-iK-RaL" customClass="AudioViewController" customModule="Captcha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t33-1M-eoF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="F6c-7v-Tmx">
-                                <rect key="frame" x="40" y="247" width="295" height="308"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="51A-rP-Fje">
-                                        <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="308"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBV-IY-R85" customClass="CaptchaLabel" customModule="Captcha" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="134"/>
-                                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                                <gestureRecognizers/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5P-we-OcP" customClass="CaptchaLabel" customModule="Captcha" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="174" width="132.66666666666666" height="134"/>
-                                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                                <gestureRecognizers/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="2Fr-OK-PxX">
-                                        <rect key="frame" x="162.66666666666663" y="0.0" width="132.33333333333337" height="308"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPz-hL-IdJ" customClass="CaptchaLabel" customModule="Captcha" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="132.33333333333334" height="134"/>
-                                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                                <gestureRecognizers/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXM-sy-czX" customClass="CaptchaLabel" customModule="Captcha" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="174" width="132.33333333333334" height="134"/>
-                                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
-                                                <gestureRecognizers/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKE-mC-ZW9">
                                 <rect key="frame" x="110" y="187.66666666666666" width="155" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
@@ -186,26 +139,94 @@
                                     <action selector="playButton:" destination="1Ly-iK-RaL" eventType="touchUpInside" id="U36-4p-gS4"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="F6c-7v-Tmx">
+                                <rect key="frame" x="37.666666666666657" y="247" width="299.66666666666674" height="330"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="51A-rP-Fje">
+                                        <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="330"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBV-IY-R85" customClass="CaptchaLabel" customModule="Captcha" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="157.66666666666666"/>
+                                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="xEg-F6-hXm" appends="YES" id="6PM-is-uri"/>
+                                                </connections>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5P-we-OcP" customClass="CaptchaLabel" customModule="Captcha" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="172.66666666666669" width="142.33333333333334" height="157.33333333333331"/>
+                                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="GSc-jH-5Ew" appends="YES" id="RBc-3t-gt5"/>
+                                                </connections>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="142.33000000000001" id="9p9-fK-zOg"/>
+                                            <constraint firstAttribute="height" constant="330" id="FQ7-HZ-K6e"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2Fr-OK-PxX">
+                                        <rect key="frame" x="157.33333333333331" y="0.0" width="142.33333333333331" height="330"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPz-hL-IdJ" customClass="CaptchaLabel" customModule="Captcha" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="157.66666666666666"/>
+                                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="BEP-AN-bpJ" appends="YES" id="Qsk-2H-8IJ"/>
+                                                </connections>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXM-sy-czX" customClass="CaptchaLabel" customModule="Captcha" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="172.66666666666669" width="142.33333333333334" height="157.33333333333331"/>
+                                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="iyd-Yz-aN5" appends="YES" id="Yxu-KW-qM2"/>
+                                                </connections>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="330" id="2Ba-7N-LxF"/>
+                                            <constraint firstAttribute="width" constant="142.33000000000001" id="MOT-LB-brf"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142.33000000000001" id="mzW-F2-PDr"/>
+                                            <constraint firstAttribute="height" constant="330" id="taq-93-LNV"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PbI-4W-MU8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PbI-4W-MU8" firstAttribute="bottom" secondItem="F6c-7v-Tmx" secondAttribute="bottom" constant="200" id="8yD-Qf-HD5"/>
-                            <constraint firstItem="F6c-7v-Tmx" firstAttribute="leading" secondItem="PbI-4W-MU8" secondAttribute="leading" constant="40" id="Evx-u4-gPw"/>
-                            <constraint firstItem="PbI-4W-MU8" firstAttribute="trailing" secondItem="GKE-mC-ZW9" secondAttribute="trailing" constant="110" id="IRV-Y3-Mc8"/>
-                            <constraint firstItem="F6c-7v-Tmx" firstAttribute="top" secondItem="PbI-4W-MU8" secondAttribute="top" constant="200" id="Rch-Lm-fj3"/>
-                            <constraint firstAttribute="trailing" secondItem="F6c-7v-Tmx" secondAttribute="trailing" constant="40" id="eES-sp-d1z"/>
-                            <constraint firstItem="GKE-mC-ZW9" firstAttribute="leading" secondItem="PbI-4W-MU8" secondAttribute="leading" constant="110" id="eYA-G0-LLc"/>
-                            <constraint firstItem="F6c-7v-Tmx" firstAttribute="top" secondItem="GKE-mC-ZW9" secondAttribute="bottom" constant="25" id="hRW-nQ-jxf"/>
+                            <constraint firstItem="F6c-7v-Tmx" firstAttribute="top" secondItem="GKE-mC-ZW9" secondAttribute="bottom" priority="999" constant="25" id="2Yr-vq-2Xf"/>
+                            <constraint firstItem="PbI-4W-MU8" firstAttribute="trailing" secondItem="GKE-mC-ZW9" secondAttribute="trailing" priority="999" constant="110" id="474-It-0Om"/>
+                            <constraint firstItem="F6c-7v-Tmx" firstAttribute="top" secondItem="PbI-4W-MU8" secondAttribute="top" constant="200" id="8Fl-ar-BYu"/>
+                            <constraint firstItem="GKE-mC-ZW9" firstAttribute="leading" secondItem="PbI-4W-MU8" secondAttribute="leading" priority="999" constant="110" id="XiG-zP-kir"/>
+                            <constraint firstItem="F6c-7v-Tmx" firstAttribute="centerX" secondItem="t33-1M-eoF" secondAttribute="centerX" id="wVg-X6-abW"/>
+                            <constraint firstAttribute="bottom" secondItem="F6c-7v-Tmx" secondAttribute="bottom" constant="235" id="yZ0-nS-cX7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aw0-lk-a87"/>
                     <connections>
+                        <outletCollection property="textCollection" destination="yXM-sy-czX" collectionClass="NSMutableArray" id="wio-GP-3Fj"/>
+                        <outletCollection property="textCollection" destination="d5P-we-OcP" collectionClass="NSMutableArray" id="KEw-jo-Xgt"/>
                         <outletCollection property="textCollection" destination="pBV-IY-R85" collectionClass="NSMutableArray" id="mqu-h7-2ol"/>
                         <outletCollection property="textCollection" destination="BPz-hL-IdJ" collectionClass="NSMutableArray" id="quB-gi-3DI"/>
-                        <outletCollection property="textCollection" destination="d5P-we-OcP" collectionClass="NSMutableArray" id="KEw-jo-Xgt"/>
-                        <outletCollection property="textCollection" destination="yXM-sy-czX" collectionClass="NSMutableArray" id="wio-GP-3Fj"/>
-                        <segue destination="akS-6e-4A6" kind="show" id="G0j-oq-bfR"/>
+                        <segue destination="akS-6e-4A6" kind="presentation" identifier="complete" modalPresentationStyle="fullScreen" id="G0j-oq-bfR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mMo-nT-XoF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -241,11 +262,11 @@
             <objects>
                 <viewController id="akS-6e-4A6" userLabel="Complete" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="exg-1h-2pf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification complete, you are most likely not a robot" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGN-Jr-4Px">
-                                <rect key="frame" x="75" y="347" width="225" height="108"/>
+                                <rect key="frame" x="75" y="347" width="225" height="131"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

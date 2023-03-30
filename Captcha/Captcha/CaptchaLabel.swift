@@ -9,6 +9,7 @@ import UIKit
 
 class CaptchaLabel: UILabel {
     
+    //given shake code
     func shake() {
         let animation = CABasicAnimation(keyPath: "position")
         
