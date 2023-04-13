@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,8 +17,14 @@ class ViewController: UIViewController {
 
     @IBAction func textFieldOutlet(_ sender: Any) {
     }
+    
+    //fires on keyboard enter
     @IBAction func textEntry(_ sender: Any) {
     }
     
+    @IBOutlet weak var mainStack: UIStackView!
+    func animFlip(){
+        
+    }
 }
 

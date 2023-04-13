@@ -9,25 +9,35 @@
 /* Begin PBXBuildFile section */
 		546BB49B29E5A50300FE935B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546BB49A29E5A50300FE935B /* AppDelegate.swift */; };
 		546BB49D29E5A50300FE935B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546BB49C29E5A50300FE935B /* SceneDelegate.swift */; };
-		546BB49F29E5A50300FE935B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546BB49E29E5A50300FE935B /* GameView.swift */; };
+		546BB49F29E5A50300FE935B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546BB49E29E5A50300FE935B /* GameViewController.swift */; };
 		546BB4A229E5A50400FE935B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 546BB4A029E5A50400FE935B /* Main.storyboard */; };
 		546BB4A429E5A50600FE935B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546BB4A329E5A50600FE935B /* Assets.xcassets */; };
 		546BB4A729E5A50600FE935B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 546BB4A529E5A50600FE935B /* LaunchScreen.storyboard */; };
 		546BB4B129E5A65F00FE935B /* Wordle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546BB4B029E5A65F00FE935B /* Wordle.swift */; };
-		54B83FCB29E5AEB500803CCD /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B83FCA29E5AEB500803CCD /* Entry.swift */; };
+		54D14A8A29E842890011D3A9 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D14A8929E842890011D3A9 /* Dictionary.swift */; };
+		54D14A8E29E8441D0011D3A9 /* dictionary.txt in Resources */ = {isa = PBXBuildFile; fileRef = 54D14A8C29E8441D0011D3A9 /* dictionary.txt */; };
+		54D14A8F29E8441D0011D3A9 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D14A8D29E8441D0011D3A9 /* help.png */; };
+		54D14A9329E84ACD0011D3A9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D14A9229E84ACD0011D3A9 /* SettingsViewController.swift */; };
+		54D14A9629E852050011D3A9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D14A9529E852050011D3A9 /* Color.swift */; };
+		54D14A9829E852320011D3A9 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D14A9729E852320011D3A9 /* Tile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		546BB49729E5A50300FE935B /* Wordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		546BB49A29E5A50300FE935B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		546BB49C29E5A50300FE935B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		546BB49E29E5A50300FE935B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		546BB49E29E5A50300FE935B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		546BB4A129E5A50400FE935B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		546BB4A329E5A50600FE935B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		546BB4A629E5A50600FE935B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		546BB4A829E5A50600FE935B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		546BB4B029E5A65F00FE935B /* Wordle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordle.swift; sourceTree = "<group>"; };
-		54B83FCA29E5AEB500803CCD /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		54D14A8929E842890011D3A9 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		54D14A8C29E8441D0011D3A9 /* dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionary.txt; sourceTree = "<group>"; };
+		54D14A8D29E8441D0011D3A9 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
+		54D14A9229E84ACD0011D3A9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		54D14A9529E852050011D3A9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		54D14A9729E852320011D3A9 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 		546BB49929E5A50300FE935B /* Wordle */ = {
 			isa = PBXGroup;
 			children = (
+				54D14A8B29E8429F0011D3A9 /* Assets */,
 				546BB4AF29E5A58100FE935B /* View */,
 				546BB4AE29E5A56E00FE935B /* Model */,
 				546BB49A29E5A50300FE935B /* AppDelegate.swift */,
@@ -76,7 +87,9 @@
 			isa = PBXGroup;
 			children = (
 				546BB4B029E5A65F00FE935B /* Wordle.swift */,
-				54B83FCA29E5AEB500803CCD /* Entry.swift */,
+				54D14A8929E842890011D3A9 /* Dictionary.swift */,
+				54D14A9529E852050011D3A9 /* Color.swift */,
+				54D14A9729E852320011D3A9 /* Tile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,9 +97,19 @@
 		546BB4AF29E5A58100FE935B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				546BB49E29E5A50300FE935B /* GameView.swift */,
+				546BB49E29E5A50300FE935B /* GameViewController.swift */,
+				54D14A9229E84ACD0011D3A9 /* SettingsViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		54D14A8B29E8429F0011D3A9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				54D14A8C29E8441D0011D3A9 /* dictionary.txt */,
+				54D14A8D29E8441D0011D3A9 /* help.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				546BB4A729E5A50600FE935B /* LaunchScreen.storyboard in Resources */,
+				54D14A8F29E8441D0011D3A9 /* help.png in Resources */,
 				546BB4A429E5A50600FE935B /* Assets.xcassets in Resources */,
+				54D14A8E29E8441D0011D3A9 /* dictionary.txt in Resources */,
 				546BB4A229E5A50400FE935B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,11 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54B83FCB29E5AEB500803CCD /* Entry.swift in Sources */,
 				546BB4B129E5A65F00FE935B /* Wordle.swift in Sources */,
-				546BB49F29E5A50300FE935B /* GameView.swift in Sources */,
+				54D14A8A29E842890011D3A9 /* Dictionary.swift in Sources */,
+				54D14A9629E852050011D3A9 /* Color.swift in Sources */,
+				546BB49F29E5A50300FE935B /* GameViewController.swift in Sources */,
 				546BB49B29E5A50300FE935B /* AppDelegate.swift in Sources */,
+				54D14A9829E852320011D3A9 /* Tile.swift in Sources */,
 				546BB49D29E5A50300FE935B /* SceneDelegate.swift in Sources */,
+				54D14A9329E84ACD0011D3A9 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
