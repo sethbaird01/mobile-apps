@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game View-->
+        <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GameView" customModule="Wordle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Wordle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,14 +48,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFN-kk-Yhe" userLabel="text entry">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aFN-kk-Yhe" userLabel="text entry" customClass="CustomTextField" customModule="Wordle" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="126.33333333333331" width="358" height="34"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                         <connections>
                                             <action selector="textEntry:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="8cf-dg-f4n"/>
-                                            <action selector="textFieldOutlet:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="vPH-S4-Ggm"/>
                                         </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nNa-Fy-0Qg">
@@ -399,6 +398,7 @@
                     <navigationItem key="navigationItem" id="jwr-Zs-GAN"/>
                     <connections>
                         <outlet property="mainStack" destination="nNa-Fy-0Qg" id="ogo-i9-o3y"/>
+                        <outlet property="textFieldOutlet" destination="aFN-kk-Yhe" id="2wG-rX-Ozi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -417,7 +417,6 @@
                                 <rect key="frame" x="163" y="321" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="darkModeSwitched:" destination="Dd7-5v-X7u" eventType="valueChanged" id="WjI-tn-y1Z"/>
                                     <action selector="darkModeSwitched:" destination="Sq9-w5-Ftv" eventType="valueChanged" id="rds-Xp-9S5"/>
                                 </connections>
                             </switch>
@@ -425,8 +424,6 @@
                                 <rect key="frame" x="163" y="412" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="hardModeOut:" destination="Sq9-w5-Ftv" eventType="valueChanged" id="vdL-cF-V2M"/>
-                                    <action selector="hardModeSwitched:" destination="Dd7-5v-X7u" eventType="valueChanged" id="BVR-Xh-lHh"/>
                                     <action selector="hardModeSwitched:" destination="Sq9-w5-Ftv" eventType="valueChanged" id="vYU-Uq-jkq"/>
                                 </connections>
                             </switch>
@@ -451,10 +448,10 @@
                     <navigationItem key="navigationItem" id="v10-mZ-og3"/>
                     <connections>
                         <outlet property="darkModeOut" destination="8CZ-cl-7J4" id="vPF-DB-r85"/>
+                        <outlet property="hardModeOut" destination="mLb-EX-yHA" id="Rsj-Sv-SfI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xWF-eE-b5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="Dd7-5v-X7u" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1808.8" y="297.78325123152712"/>
         </scene>

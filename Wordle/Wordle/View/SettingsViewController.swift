@@ -16,9 +16,8 @@ class SettingsViewController: UIViewController {
     }
     
     @IBOutlet weak var darkModeOut: UISwitch!
+    @IBOutlet weak var hardModeOut: UISwitch!
     
-    @IBAction func hardModeOut(_ sender: Any) {
-    }
     
     @IBAction func darkModeSwitched(_ sender: Any) {
         if(darkModeOut.isOn){
@@ -38,5 +37,6 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func hardModeSwitched(_ sender: Any) {
+        GameViewController.wordle.setDifficulty(new_hard: hardModeOut.isOn)
     }
 }

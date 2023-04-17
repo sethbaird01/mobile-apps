@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Color {
+enum WordleColor {
 case GREEN
 case YELLOW
 case GRAY

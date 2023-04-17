@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class Tile{
-    var color: Color = Color.GRAY
+    var color: WordleColor = WordleColor.GRAY
     var letter: Character
     let label: UILabel
     
