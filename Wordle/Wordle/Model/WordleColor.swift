@@ -8,7 +8,7 @@
 import Foundation
 
 enum WordleColor {
-case GREEN
-case YELLOW
-case GRAY
+    case GREEN
+    case YELLOW
+    case GRAY
 }
