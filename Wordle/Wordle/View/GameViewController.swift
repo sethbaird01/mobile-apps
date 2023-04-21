@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Wordle
-//
-//  Created by Baird, Seth J on 4/11/23.
-//
-
 import UIKit
 
 class GameViewController: UIViewController {
@@ -25,10 +18,11 @@ class GameViewController: UIViewController {
         //must be lowercased
         let guessedWord: String = textFieldOutlet.text!.lowercased()
         textFieldOutlet.text = ""
-        let guessedArray = Array(guessedWord)
+        var guessedArray = Array(guessedWord)
+        
         GameViewController.wordle.colors = Array(repeating: WordleColor.GRAY, count: GameViewController.wordle.WORD_LEN)
-        if(guessedWord.count != GameViewController.wordle.WORD_LEN){
-            //incorrect length
+        if(guessedWord.count != GameViewController.wordle.WORD_LEN || !GameViewController.wordle.dict_counted.contains(guessedWord.uppercased())){
+            //incorrect length or invalid word
             textFieldOutlet.shake()
             textFieldOutlet.text = ""
         }else{
@@ -41,34 +35,34 @@ class GameViewController: UIViewController {
                 //incorrect word
                 var index: Int = 0
                 for letter in guessedArray {
-                    //yellows
-                    if(GameViewController.wordle.GOAL_LETTERS.keys.contains(letter)){
-//  one vs two yellows case unimplemented
-                        GameViewController.wordle.colors[index] = .YELLOW
-                    }else{
-                        GameViewController.wordle.deadLetters.insert(letter)
-                    }
                     //greens
                     if(letter == Array(GameViewController.wordle.GOAL_WORD)[index]){
                         GameViewController.wordle.colors[index] = .GREEN
+                    } else
+                     if(GameViewController.wordle.GOAL_LETTERS.keys.contains(letter)){
+                         //yellows
+                        GameViewController.wordle.colors[index] = .YELLOW
+                    }else{
+                        //grays
+                        GameViewController.wordle.deadLetters.insert(letter)
                     }
                     index += 1
-                    //for end
+                    //for each end
                 }
             }
+        //only runs on valid word
+            updateCells(row: currentRow, guessed: guessedWord)
+            updateDeadLetters()
+            currentRow += 1
         }
-        updateCells(row: currentRow, guessed: guessedWord)
-        updateDeadLetters()
-        currentRow += 1
     }
     
     @IBOutlet weak var mainStack: UIStackView!
 
     func updateCells(row: Int, guessed: String){
-        var guessedLetters = Array(guessed)
-        var rowElems = mainStack.subviews
+        let guessedLetters = Array(guessed)
         var index = 0
-        for cell in rowElems[row].subviews{
+        for cell in mainStack.subviews[row].subviews{
             switch GameViewController.wordle.colors[index] {
             case .GREEN:
                 cell.backgroundColor = .systemGreen
@@ -84,5 +78,17 @@ class GameViewController: UIViewController {
     
     func updateDeadLetters(){
         deadLettersOut.text = GameViewController.wordle.deadLetters.compactMap({"\($0), "}).joined().trimmingCharacters(in: .whitespaces).trimmingCharacters(in: .punctuationCharacters)
+    }
+    
+    func indexOfAll(elem: Character, arr: [Character]) -> Set<Int>{
+        var index = 0
+        var found: Set<Int> = []
+        for each in arr {
+            if(each == elem){
+                found.insert(index)
+            }
+            index += 1
+        }
+        return found
     }
 }
