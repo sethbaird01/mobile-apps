@@ -10,3 +10,4 @@ import Foundation
 struct Food {
     let name, description: String
 }
+
