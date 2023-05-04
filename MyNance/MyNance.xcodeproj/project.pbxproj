@@ -10,6 +10,8 @@
 		548E37032A015C9500AC1125 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548E37022A015C9500AC1125 /* Transaction.swift */; };
 		548E37052A015CB600AC1125 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548E37042A015CB600AC1125 /* CustomCell.swift */; };
 		548E37072A015EAC00AC1125 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548E37062A015EAC00AC1125 /* TransactionViewController.swift */; };
+		54B056682A03EED10075C61E /* TransactionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B056672A03EED10075C61E /* TransactionStore.swift */; };
+		54B0566C2A03FEBC0075C61E /* Mynance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B0566B2A03FEBC0075C61E /* Mynance.swift */; };
 		54B0A6B52A01507100A55E94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B0A6B42A01507100A55E94 /* AppDelegate.swift */; };
 		54B0A6B72A01507100A55E94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B0A6B62A01507100A55E94 /* SceneDelegate.swift */; };
 		54B0A6B92A01507100A55E94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B0A6B82A01507100A55E94 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 		548E37022A015C9500AC1125 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		548E37042A015CB600AC1125 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		548E37062A015EAC00AC1125 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		54B056672A03EED10075C61E /* TransactionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStore.swift; sourceTree = "<group>"; };
+		54B0566B2A03FEBC0075C61E /* Mynance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mynance.swift; sourceTree = "<group>"; };
 		54B0A6B12A01507100A55E94 /* MyNance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B0A6B42A01507100A55E94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54B0A6B62A01507100A55E94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 			children = (
 				548E37022A015C9500AC1125 /* Transaction.swift */,
 				548E37042A015CB600AC1125 /* CustomCell.swift */,
+				54B0566B2A03FEBC0075C61E /* Mynance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 				54B0A6B42A01507100A55E94 /* AppDelegate.swift */,
 				54B0A6B62A01507100A55E94 /* SceneDelegate.swift */,
 				54B0A6CB2A015A7900A55E94 /* PickerDelegate.swift */,
+				54B056672A03EED10075C61E /* TransactionStore.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,9 +184,11 @@
 				548E37072A015EAC00AC1125 /* TransactionViewController.swift in Sources */,
 				54B0A6B92A01507100A55E94 /* ViewController.swift in Sources */,
 				54B0A6B52A01507100A55E94 /* AppDelegate.swift in Sources */,
+				54B056682A03EED10075C61E /* TransactionStore.swift in Sources */,
 				54B0A6B72A01507100A55E94 /* SceneDelegate.swift in Sources */,
 				548E37052A015CB600AC1125 /* CustomCell.swift in Sources */,
 				548E37032A015C9500AC1125 /* Transaction.swift in Sources */,
+				54B0566C2A03FEBC0075C61E /* Mynance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

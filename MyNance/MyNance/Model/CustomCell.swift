@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
 class CustomCell: UITableViewCell {
-    <#code#>
+    
 }

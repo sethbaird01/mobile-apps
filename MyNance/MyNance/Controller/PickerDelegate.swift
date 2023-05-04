@@ -13,6 +13,7 @@ class PickerDelegate: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     var data: [String]
     
     init(data: [String]) {
+        print("!!! \(data)")
         self.data = data
     }
     
